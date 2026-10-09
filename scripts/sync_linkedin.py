@@ -133,6 +133,9 @@ def main():
     if rows:
         log("Campi disponibili:", ", ".join(sorted(rows[0].keys())))
 
+    dates = sorted(pick(r, "Date", "Created", "Created At")[:10] for r in rows)
+    status = {"post_ricevuti_da_linkedin": len(rows), "campi": sorted(rows[0].keys()) if rows else [],
+              "post_piu_recente_su_linkedin": dates[-1] if dates else None, "articoli_sul_sito": None}
     added = []
     for r in rows:
         link = pick(r, "ShareLink", "Share Link", "Link")
@@ -162,6 +165,8 @@ def main():
         posts.append(post); added.append(post)
         known_links.add(link); known_text.add(norm_text(text))
 
+    status["articoli_sul_sito"] = len(posts)
+    (ROOT / "stato-linkedin.json").write_text(json.dumps(status, ensure_ascii=False, indent=1) + "\n")
     if not added:
         log("Nessun post nuovo.")
         return

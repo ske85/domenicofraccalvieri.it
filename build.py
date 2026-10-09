@@ -70,7 +70,7 @@ def page(title, desc, path, main, extra_head="", depth=0):
 <meta property="og:site_name" content="{NAME}">
 <meta property="og:locale" content="it_IT">
 <link rel="icon" href="{rel}favicon.svg" type="image/svg+xml">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self' data:; connect-src 'none'; object-src 'none'; base-uri 'self'; form-action 'none'; upgrade-insecure-requests">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self' data:; connect-src 'none'; object-src 'none'; base-uri 'self'; form-action 'none'">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <link rel="stylesheet" href="{rel}assets/style.css">
 {extra_head}

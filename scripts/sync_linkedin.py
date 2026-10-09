@@ -28,6 +28,31 @@ def log(*a):
     print(*a, flush=True)
 
 
+DIAG = {}
+
+
+def probe_domains(token):
+    """Chiede a LinkedIn quali categorie di dati sono pronte (solo nomi e conteggi, nessun contenuto)."""
+    found = {}
+    for start in range(0, 40):
+        qs = urllib.parse.urlencode({"q": "criteria", "start": start})
+        req = urllib.request.Request(f"{API}?{qs}", headers={
+            "Authorization": f"Bearer {token}", "Linkedin-Version": "202312", "X-Restli-Protocol-Version": "2.0.0"})
+        try:
+            with urllib.request.urlopen(req, timeout=60) as r:
+                data = json.load(r)
+        except urllib.error.HTTPError as e:
+            DIAG["probe_errore"] = f"{e.code} {e.read().decode('utf-8', 'replace')[:160]}"
+            break
+        els = data.get("elements", [])
+        if not els:
+            break
+        for el in els:
+            d = el.get("snapshotDomain", "?")
+            found[d] = found.get(d, 0) + len(el.get("snapshotData", []))
+    DIAG["categorie_disponibili"] = found
+
+
 def fetch_shares(token):
     rows, start = [], 0
     while True:
@@ -44,9 +69,11 @@ def fetch_shares(token):
                 log("Dettaglio:", body)
                 sys.exit(1)
             if e.code == 404 or "No data found" in body:
+                DIAG.setdefault("risposta_post", f"{e.code} {body[:160]}")
                 break
             log(f"ERRORE {e.code} da LinkedIn:", body)
             sys.exit(1)
+        DIAG.setdefault("risposta_post", f"200, elementi: {len(data.get('elements', []))}")
         page = []
         for el in data.get("elements", []):
             page.extend(el.get("snapshotData", []))
@@ -166,6 +193,9 @@ def main():
         known_links.add(link); known_text.add(norm_text(text))
 
     status["articoli_sul_sito"] = len(posts)
+    if not rows:
+        probe_domains(token)
+    status["diagnosi"] = DIAG
     (ROOT / "stato-linkedin.json").write_text(json.dumps(status, ensure_ascii=False, indent=1) + "\n")
     if not added:
         log("Nessun post nuovo.")

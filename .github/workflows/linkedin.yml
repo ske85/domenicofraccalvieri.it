@@ -1,0 +1,48 @@
+name: Aggiorna articoli da LinkedIn
+
+on:
+  schedule:
+    - cron: "17 5 * * *"   # ogni giorno alle 7:17 ora italiana (6:17 con l'ora solare)
+  workflow_dispatch: {}
+  push:
+    branches: [main]
+    paths:
+      - "scripts/sync_linkedin.py"
+      - ".github/workflows/linkedin.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: linkedin-sync
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Scarica i post nuovi da LinkedIn
+        env:
+          LINKEDIN_TOKEN: ${{ secrets.LINKEDIN_TOKEN }}
+        run: python scripts/sync_linkedin.py
+
+      - name: Rigenera il sito
+        run: python build.py
+
+      - name: Pubblica le modifiche
+        run: |
+          if git diff --quiet; then
+            echo "Nessuna modifica da pubblicare."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Nuovi articoli da LinkedIn"
+          git push

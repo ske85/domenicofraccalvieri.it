@@ -5,30 +5,6 @@
  "articoli_sul_sito": 168,
  "diagnosi": {
   "risposta_post": "404 {\"code\":\"\",\"message\":\"No data found for this domain and memberId.\",\"status\":404}",
-  "probe_errore": "404 {\"code\":\"\",\"message\":\"No data found for this memberId.\",\"status\":404}",
-  "categorie_disponibili": {
-   "WHATSAPP_NUMBERS": 1,
-   "TRUSTED_GRAPH": 2,
-   "SKILLS": 73,
-   "RICH_MEDIA": 20,
-   "REGISTRATION": 1,
-   "RECOMMENDATIONS": 1,
-   "RECEIPTS_LBP": 4,
-   "PROFILE_SUMMARY": 1,
-   "PROFILE": 1,
-   "POSITIONS": 8,
-   "PHONE_NUMBERS": 2,
-   "LEARNING": 96,
-   "INVITATIONS": 213,
-   "GROUPS": 3,
-   "Events": 4,
-   "ENDORSEMENTS": 45,
-   "EMAIL_ADDRESSES": 3,
-   "EDUCATION": 1,
-   "CONNECTIONS": 615,
-   "COMPANY_FOLLOWS": 99,
-   "CERTIFICATIONS": 3,
-   "AD_TARGETING": 1
-  }
+  "eventi_registro": {}
  }
 }

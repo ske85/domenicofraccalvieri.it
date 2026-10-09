@@ -31,28 +31,6 @@ def log(*a):
 DIAG = {}
 
 
-def probe_domains(token):
-    """Chiede a LinkedIn quali categorie di dati sono pronte (solo nomi e conteggi, nessun contenuto)."""
-    found = {}
-    for start in range(0, 40):
-        qs = urllib.parse.urlencode({"q": "criteria", "start": start})
-        req = urllib.request.Request(f"{API}?{qs}", headers={
-            "Authorization": f"Bearer {token}", "Linkedin-Version": "202312", "X-Restli-Protocol-Version": "2.0.0"})
-        try:
-            with urllib.request.urlopen(req, timeout=60) as r:
-                data = json.load(r)
-        except urllib.error.HTTPError as e:
-            DIAG["probe_errore"] = f"{e.code} {e.read().decode('utf-8', 'replace')[:160]}"
-            break
-        els = data.get("elements", [])
-        if not els:
-            break
-        for el in els:
-            d = el.get("snapshotDomain", "?")
-            found[d] = found.get(d, 0) + len(el.get("snapshotData", []))
-    DIAG["categorie_disponibili"] = found
-
-
 def fetch_shares(token):
     rows, start = [], 0
     while True:
@@ -84,6 +62,70 @@ def fetch_shares(token):
         start += 1
         if start > 200:
             break
+    return rows
+
+
+CHANGELOG = "https://api.linkedin.com/rest/memberChangeLogs"
+POST_RESOURCES = {"ugcposts", "posts", "shares"}
+
+
+def find_text(obj):
+    """Cerca il testo del post dentro l'attività (formati ugcPosts e posts)."""
+    if isinstance(obj, dict):
+        for key in ("shareCommentary", "commentary"):
+            v = obj.get(key)
+            if isinstance(v, str) and v.strip():
+                return v
+            if isinstance(v, dict) and isinstance(v.get("text"), str):
+                return v["text"]
+        for v in obj.values():
+            t = find_text(v)
+            if t: return t
+    elif isinstance(obj, list):
+        for v in obj:
+            t = find_text(v)
+            if t: return t
+    return ""
+
+
+def fetch_changelog(token):
+    """Post creati negli ultimi 28 giorni (registrati da quando è stato dato il consenso)."""
+    import time, datetime
+    since = int((time.time() - 27 * 86400) * 1000)
+    rows, kinds, start = [], {}, since
+    for _ in range(50):
+        qs = urllib.parse.urlencode({"q": "memberAndApplication", "startTime": start, "count": 50})
+        req = urllib.request.Request(f"{CHANGELOG}?{qs}", headers={
+            "Authorization": f"Bearer {token}", "Linkedin-Version": "202312", "X-Restli-Protocol-Version": "2.0.0"})
+        try:
+            with urllib.request.urlopen(req, timeout=60) as r:
+                data = json.load(r)
+        except urllib.error.HTTPError as e:
+            DIAG["registro_attivita"] = f"{e.code} {e.read().decode('utf-8', 'replace')[:160]}"
+            break
+        els = data.get("elements", [])
+        if not els:
+            break
+        last = start
+        for ev in els:
+            res, method = str(ev.get("resourceName", "")), str(ev.get("method", ""))
+            kinds[f"{res}:{method}"] = kinds.get(f"{res}:{method}", 0) + 1
+            last = max(last, int(ev.get("processedAt") or ev.get("capturedAt") or last))
+            if res.lower() not in POST_RESOURCES or method.upper() != "CREATE":
+                continue
+            act = ev.get("activity") or ev.get("processedActivity") or {}
+            text = find_text(act)
+            urn = str(act.get("id") or ev.get("resourceId") or "")
+            if urn and not urn.startswith("urn:"):
+                urn = f"urn:li:{'share' if res.lower() == 'shares' else 'ugcPost'}:{urn}"
+            ms = (act.get("created") or {}).get("time") or act.get("createdAt") or ev.get("capturedAt") or 0
+            date = datetime.datetime.utcfromtimestamp(int(ms) / 1000).strftime("%Y-%m-%d %H:%M:%S") if ms else ""
+            rows.append({"Date": date, "ShareLink": f"https://www.linkedin.com/feed/update/{urn}/" if urn else "",
+                         "ShareCommentary": text, "SharedUrl": ""})
+        if last <= start or len(els) < 50:
+            break
+        start = last + 1
+    DIAG["eventi_registro"] = kinds
     return rows
 
 
@@ -155,7 +197,7 @@ def main():
     known_text = {norm_text(" ".join(p["testo"])) for p in posts}
     slugs = {p["slug"] for p in posts}
 
-    rows = fetch_shares(token)
+    rows = fetch_shares(token) + fetch_changelog(token)
     log(f"LinkedIn ha restituito {len(rows)} post.")
     if rows:
         log("Campi disponibili:", ", ".join(sorted(rows[0].keys())))
@@ -193,8 +235,6 @@ def main():
         known_links.add(link); known_text.add(norm_text(text))
 
     status["articoli_sul_sito"] = len(posts)
-    if not rows:
-        probe_domains(token)
     status["diagnosi"] = DIAG
     (ROOT / "stato-linkedin.json").write_text(json.dumps(status, ensure_ascii=False, indent=1) + "\n")
     if not added:

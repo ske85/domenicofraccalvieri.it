@@ -1,10 +1,22 @@
 {
- "post_ricevuti_da_linkedin": 0,
- "campi": [],
- "post_piu_recente_su_linkedin": null,
- "articoli_sul_sito": 168,
+ "post_ricevuti_da_linkedin": 240,
+ "campi": [
+  "Date",
+  "MediaUrl",
+  "ShareCommentary",
+  "ShareLink",
+  "SharedUrl",
+  "Visibility"
+ ],
+ "post_piu_recente_su_linkedin": "2026-10-09",
+ "articoli_sul_sito": 172,
  "diagnosi": {
-  "risposta_post": "404 {\"code\":\"\",\"message\":\"No data found for this domain and memberId.\",\"status\":404}",
-  "eventi_registro": {}
+  "risposta_post": "200, elementi: 1",
+  "eventi_registro": {
+   "invitations:ACTION": 3,
+   "socialActions/likes:CREATE": 4,
+   "ugcPosts:UPDATE": 1,
+   "ugcPosts:CREATE": 1
+  }
  }
 }

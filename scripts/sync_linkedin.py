@@ -188,13 +188,24 @@ def norm_text(s):
     return re.sub(r"\W+", "", s.lower())[:160]
 
 
+def post_id(link):
+    """Numero identificativo del post, uguale in tutti i formati di link di LinkedIn."""
+    m = re.findall(r"\d{15,}", urllib.parse.unquote(link or ""))
+    return m[-1] if m else ""
+
+
+EXCLUDED = ROOT / "scripts" / "esclusi.txt"
+
+
 def main():
     token = os.environ.get("LINKEDIN_TOKEN", "").strip()
     if not token:
         log("ERRORE: manca il segreto LINKEDIN_TOKEN."); sys.exit(1)
     posts = json.load(open(POSTS, encoding="utf-8"))
-    known_links = {p["linkedin"] for p in posts}
-    known_text = {norm_text(" ".join(p["testo"])) for p in posts}
+    known_links = {post_id(p["linkedin"]) for p in posts}
+    if EXCLUDED.exists():
+        known_links |= {post_id(l) for l in EXCLUDED.read_text().split() if post_id(l)}
+    known_text = {norm_text(" ".join(p["testo"])) for p in posts} | {norm_text(" ".join(p["testo"][1:])) for p in posts}
     slugs = {p["slug"] for p in posts}
 
     rows = fetch_shares(token) + fetch_changelog(token)
@@ -214,7 +225,8 @@ def main():
             continue
         body, tags = paragraphs(raw)
         text = " ".join(body)
-        if len(text) < MIN_CHARS or link in known_links or norm_text(text) in known_text:
+        if (len(text) < MIN_CHARS or post_id(link) in known_links or norm_text(text) in known_text
+                or norm_text(" ".join(body[1:])) in known_text):
             continue
         first = body[0]
         if len(first) <= 125 and len(body) > 1 and not first.startswith("http"):
@@ -232,7 +244,7 @@ def main():
                 "testo": rest, "hashtag": tags[:6], "linkedin": link,
                 "fonte": "" if "linkedin.com" in shared else shared}
         posts.append(post); added.append(post)
-        known_links.add(link); known_text.add(norm_text(text))
+        known_links.add(post_id(link)); known_text.add(norm_text(text)); known_text.add(norm_text(" ".join(rest)))
 
     status["articoli_sul_sito"] = len(posts)
     status["diagnosi"] = DIAG

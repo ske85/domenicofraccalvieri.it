@@ -148,3 +148,15 @@ footer.site a{text-decoration:none} footer.site a:hover{color:var(--accent)}
 .about .body .btn{justify-self:start}
 h1.about-h, .about h1{font-family:var(--f-display); font-weight:800; font-size:2.2rem; letter-spacing:-.03em; line-height:1; margin:0}
 footer.site .privacy{flex-basis:100%}
+
+/* Energia Comune: unico spazio promozionale */
+.ec{display:grid; gap:10px; padding:22px 22px 18px; margin-block:8px; border:1px solid var(--rule); border-top:3px solid var(--a-energia);
+  border-radius:8px; background:var(--surface)}
+.ec .label{color:var(--a-energia)}
+.ec-lead{margin:0; font-family:var(--f-display); font-weight:700; font-size:1.25rem; line-height:1.25; letter-spacing:-.01em; text-wrap:balance}
+.ec-text{margin:0; color:var(--muted); max-width:60ch}
+.ec-btn{justify-self:start; margin-top:4px}
+.ec-note{margin:2px 0 0; font-family:var(--f-mono); font-size:.72rem; color:var(--muted)}
+article.post .ec{margin-top:32px}
+main > .ec{margin-top:32px}
+.about .ec{margin-top:18px}

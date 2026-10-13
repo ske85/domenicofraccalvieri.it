@@ -1,5 +1,5 @@
 {
- "post_ricevuti_da_linkedin": 246,
+ "post_ricevuti_da_linkedin": 491,
  "campi": [
   "Date",
   "MediaUrl",
@@ -13,8 +13,8 @@
  "diagnosi": {
   "risposta_post": "200, elementi: 1",
   "eventi_registro": {
-   "invitations:ACTION": 5,
-   "socialActions/likes:CREATE": 32,
+   "invitations:ACTION": 13,
+   "socialActions/likes:CREATE": 45,
    "ugcPosts:UPDATE": 1,
    "ugcPosts:CREATE": 7
   }

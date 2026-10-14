@@ -100,8 +100,8 @@ def page(title, desc, path, main, extra_head="", depth=0):
 def jsonld(obj):
     return '<script type="application/ld+json">' + json.dumps(obj, ensure_ascii=False).replace("</", "<\\/") + "</script>"
 
-PERSON = {"@type": "Person", "name": NAME, "jobTitle": "Chief Financial Officer",
-          "worksFor": {"@type": "Organization", "name": "Energia Comune (Ecom S.p.A.)"},
+PERSON = {"@type": "Person", "name": NAME, "jobTitle": "Chief Financial Officer", "image": SITE + "/assets/ritratto.jpg",
+          "worksFor": {"@type": "Organization", "name": "Ecom S.p.A. – Energia Comune"},
           "url": SITE + "/", "sameAs": [LINKEDIN],
           "knowsAbout": ["Mercato dell'energia", "Bollette luce e gas", "Finanza aziendale", "Leadership"]}
 
@@ -151,6 +151,7 @@ def build():
     shutil.copy(ROOT / "assets" / "style.css", OUT / "assets" / "style.css")
     shutil.copy(ROOT / "assets" / "site.js", OUT / "assets" / "site.js")
     shutil.copy(ROOT / "assets" / "favicon.svg", OUT / "favicon.svg")
+    shutil.copy(ROOT / "assets" / "ritratto.jpg", OUT / "assets" / "ritratto.jpg")
     shutil.copytree(ROOT / "assets" / "fonts", OUT / "assets" / "fonts")
     (OUT / "CNAME").write_text("domenicofraccalvieri.it\n")
     (OUT / ".nojekyll").write_text("")
@@ -219,7 +220,12 @@ def build():
   </div>
   <p class="empty" id="empty" hidden>Nessun articolo trovato. Prova con un'altra parola o un'altra area.</p>
   <div class="more"><button type="button" id="more" hidden>Mostra altri</button></div>
-  {about_section()}"""
+  <section class="home-about" aria-label="Chi sono">
+    <img src="assets/ritratto.jpg" alt="Domenico Fraccalvieri" width="96" height="96">
+    <div><p class="label">Chi sono</p>
+      <p class="t">Dal customer care alla direzione finanziaria di Energia Comune.</p>
+      <a class="more-link" href="chi-sono/">Leggi la mia storia →</a></div>
+  </section>"""
     ld = jsonld({"@context": "https://schema.org", "@type": "WebSite", "name": NAME, "url": SITE + "/", "inLanguage": "it-IT", "author": PERSON})
     (OUT / "index.html").write_text(page(f"{NAME} · Energia, finanza e valori",
         "Domenico Fraccalvieri, CFO di Energia Comune, scrive di mercato dell'energia, bollette, finanza d'impresa e leadership.",
@@ -228,8 +234,8 @@ def build():
     # chi sono
     d = OUT / "chi-sono"; d.mkdir()
     (d / "index.html").write_text(page(f"Chi sono · {NAME}",
-        "Domenico Fraccalvieri, Chief Financial Officer di Ecom S.p.A. (Energia Comune). Scrive di energia, finanza e valori.",
-        "/chi-sono/", about_section("h1"), jsonld({"@context": "https://schema.org", "@type": "ProfilePage", "mainEntity": PERSON}), depth=1), encoding="utf-8")
+        "Domenico Fraccalvieri: dal customer care alla direzione finanziaria di Ecom S.p.A. – Energia Comune. Percorso, competenze e interventi.",
+        "/chi-sono/", (ROOT / "assets" / "chi-sono.html").read_text(encoding="utf-8").replace("{EC_BOX}", ec_box("chi-sono")), jsonld({"@context": "https://schema.org", "@type": "ProfilePage", "mainEntity": PERSON}), depth=1), encoding="utf-8")
 
     # 404
     (OUT / "404.html").write_text(page(f"Pagina non trovata · {NAME}", "Pagina non trovata.", "/404.html",

@@ -13,14 +13,14 @@
  "diagnosi": {
   "risposta_post": "200, elementi: 1",
   "eventi_registro": {
-   "invitations:ACTION": 56,
-   "socialActions/likes:CREATE": 193,
+   "invitations:ACTION": 57,
+   "socialActions/likes:CREATE": 199,
    "ugcPosts:UPDATE": 2,
    "ugcPosts:CREATE": 30,
-   "messages:CREATE": 39,
+   "messages:CREATE": 43,
    "endorsement:DELETE": 1,
    "endorsement:CREATE": 3,
-   "socialActions/comments:CREATE": 4,
+   "socialActions/comments:CREATE": 6,
    "ugcPosts:DELETE": 1,
    "instantReposts:CREATE": 1,
    "messages:UPDATE": 1

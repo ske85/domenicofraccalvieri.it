@@ -145,6 +145,14 @@ def about_section(h="h2"):
     </div>
   </section>"""
 
+def upcoming(html_text):
+    """{PROSSIMO:AAAA-MM-GG} diventa "In programma · " finché la data non è passata."""
+    import datetime
+    today = datetime.date.today().isoformat()
+    return re.sub(r"\{PROSSIMO:(\d{4}-\d{2}-\d{2})\}",
+                  lambda m: '<em class="soon">In programma</em> · ' if m.group(1) >= today else "", html_text)
+
+
 def build():
     if OUT.exists(): shutil.rmtree(OUT)
     (OUT / "assets").mkdir(parents=True)
@@ -152,6 +160,7 @@ def build():
     shutil.copy(ROOT / "assets" / "site.js", OUT / "assets" / "site.js")
     shutil.copy(ROOT / "assets" / "favicon.svg", OUT / "favicon.svg")
     shutil.copy(ROOT / "assets" / "ritratto.jpg", OUT / "assets" / "ritratto.jpg")
+    shutil.copy(ROOT / "assets" / "qr-linkedin.svg", OUT / "assets" / "qr-linkedin.svg")
     shutil.copytree(ROOT / "assets" / "fonts", OUT / "assets" / "fonts")
     (OUT / "CNAME").write_text("domenicofraccalvieri.it\n")
     (OUT / ".nojekyll").write_text("")
@@ -225,6 +234,7 @@ def build():
     <div><p class="label">Chi sono</p>
       <p class="t">Dal customer care alla direzione finanziaria di Energia Comune.</p>
       <a class="more-link" href="chi-sono/">Leggi la mia storia →</a></div>
+    <div class="qr"><img src="assets/qr-linkedin.svg" alt="Codice QR del profilo LinkedIn di Domenico Fraccalvieri" width="96" height="96"><span>LinkedIn</span></div>
   </section>"""
     ld = jsonld({"@context": "https://schema.org", "@type": "WebSite", "name": NAME, "url": SITE + "/", "inLanguage": "it-IT", "author": PERSON})
     (OUT / "index.html").write_text(page(f"{NAME} · Energia, finanza e valori",
@@ -235,7 +245,7 @@ def build():
     d = OUT / "chi-sono"; d.mkdir()
     (d / "index.html").write_text(page(f"Chi sono · {NAME}",
         "Domenico Fraccalvieri: dal customer care alla direzione finanziaria di Ecom S.p.A. – Energia Comune. Percorso, competenze e interventi.",
-        "/chi-sono/", (ROOT / "assets" / "chi-sono.html").read_text(encoding="utf-8").replace("{EC_BOX}", ec_box("chi-sono")), jsonld({"@context": "https://schema.org", "@type": "ProfilePage", "mainEntity": PERSON}), depth=1), encoding="utf-8")
+        "/chi-sono/", upcoming((ROOT / "assets" / "chi-sono.html").read_text(encoding="utf-8").replace("{EC_BOX}", ec_box("chi-sono"))), jsonld({"@context": "https://schema.org", "@type": "ProfilePage", "mainEntity": PERSON}), depth=1), encoding="utf-8")
 
     # 404
     (OUT / "404.html").write_text(page(f"Pagina non trovata · {NAME}", "Pagina non trovata.", "/404.html",

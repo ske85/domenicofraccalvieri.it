@@ -261,3 +261,14 @@ main > .ec{margin-top:32px}
 .steps li.st7{--i:7}
 .steps li.st8{--i:8}
 .steps li.st9{--i:9}
+
+/* QR LinkedIn: solo su schermi grandi, su telefono basta il pulsante */
+.qr{display:grid; grid-template-columns:auto minmax(0,1fr); gap:12px; align-items:center; padding:12px; background:#fff; border:1px solid var(--rule); border-radius:8px; max-width:300px}
+.qr img{width:96px; height:96px; display:block}
+.side .qr img{width:120px; height:120px}
+.qr span{font-family:var(--f-mono); font-size:.72rem; line-height:1.45; color:#4A5866}
+.home-about{grid-template-columns:96px minmax(0,1fr) auto}
+.home-about .qr{grid-template-columns:auto; justify-items:center; padding:8px; gap:4px}
+.home-about .qr img{width:84px; height:84px}
+@media (max-width:860px){ .qr{display:none} .home-about{grid-template-columns:96px minmax(0,1fr)} }
+.soon{font-style:normal; font-family:var(--f-mono); font-size:.72rem; text-transform:uppercase; letter-spacing:.06em; color:var(--accent)}

@@ -161,6 +161,8 @@ def build():
     shutil.copy(ROOT / "assets" / "favicon.svg", OUT / "favicon.svg")
     shutil.copy(ROOT / "assets" / "ritratto.jpg", OUT / "assets" / "ritratto.jpg")
     shutil.copy(ROOT / "assets" / "qr-linkedin.svg", OUT / "assets" / "qr-linkedin.svg")
+    for i in (1, 2, 3):
+        shutil.copy(ROOT / "assets" / f"evento-{i}.jpg", OUT / "assets" / f"evento-{i}.jpg")
     shutil.copytree(ROOT / "assets" / "fonts", OUT / "assets" / "fonts")
     (OUT / "CNAME").write_text("domenicofraccalvieri.it\n")
     (OUT / ".nojekyll").write_text("")

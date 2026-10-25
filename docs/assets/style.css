@@ -272,3 +272,11 @@ main > .ec{margin-top:32px}
 .home-about .qr img{width:84px; height:84px}
 @media (max-width:860px){ .qr{display:none} .home-about{grid-template-columns:96px minmax(0,1fr)} }
 .soon{font-style:normal; font-family:var(--f-mono); font-size:.72rem; text-transform:uppercase; letter-spacing:.06em; color:var(--accent)}
+/* Intervento in evidenza */
+.event-hl{display:grid; gap:12px; padding:20px; background:var(--surface); border:1px solid var(--rule); border-top:3px solid var(--a-energia); border-radius:8px}
+.event-hl .label{color:var(--a-energia); margin:0}
+.event-hl h3{font-family:var(--f-display); font-weight:800; font-size:1.5rem; letter-spacing:-.02em; margin:0}
+.event-hl p{margin:0}
+.gallery{display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:10px; margin:6px 0 0; padding:0; list-style:none}
+.gallery img{width:100%; height:auto; aspect-ratio:4/5; object-fit:cover; border-radius:6px; display:block}
+@media (max-width:520px){ .gallery{grid-template-columns:repeat(2,minmax(0,1fr))} .gallery li:last-child{display:none} }

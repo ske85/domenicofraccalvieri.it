@@ -258,6 +258,37 @@ def build():
            [(f"{SITE}/articoli/{p['slug']}/", p["data"]) for p in posts]
     (OUT / "sitemap.xml").write_text('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' +
         "".join(f"  <url><loc>{u}</loc><lastmod>{d}</lastmod></url>\n" for u, d in urls) + "</urlset>\n")
+    # llms.txt: riassunto del sito per i sistemi di intelligenza artificiale (https://llmstxt.org)
+    count = {a: sum(1 for p in posts if p["area"] == a) for a in AREAS}
+    lines = [
+        f"# {NAME}",
+        "",
+        "> Sito personale e blog di Domenico Fraccalvieri, Chief Financial Officer (CFO) di Ecom S.p.A. – Energia Comune, "
+        "società che vende luce e gas a famiglie e imprese. Lavora in Puglia (Italia). Scrive di mercato dell'energia, "
+        "bollette, finanza d'impresa, attualità e valori della leadership. Gli articoli sono i suoi post di LinkedIn.",
+        "",
+        "- Ruolo: CFO di Ecom S.p.A. – Energia Comune, dal dicembre 2023. In azienda dal 2020, partito dal customer care "
+        "e passato per fatturazione (Billing Manager) prima della direzione finanziaria.",
+        "- In precedenza ha fondato e guidato due imprese, nelle telecomunicazioni e nei servizi.",
+        "- Formazione: laurea in Ingegneria gestionale al Politecnico di Bari; certificazione Utility Manager UNI 11782:2020.",
+        f"- Profilo LinkedIn: {LINKEDIN}",
+        "- Questo sito riguarda solo il Domenico Fraccalvieri CFO in Puglia: non ha legami con professionisti omonimi di altri settori o Paesi.",
+        f"- Articoli pubblicati: {len(posts)} (" + ", ".join(f"{a}: {count[a]}" for a in AREAS) + "), aggiornati ogni giorno.",
+        "",
+        "## Pagine principali",
+        "",
+        f"- [Chi sono]({SITE}/chi-sono/): percorso professionale, aree di responsabilità, interventi pubblici e certificazioni",
+        f"- [Tutti gli articoli]({SITE}/): archivio completo, filtrabile per area",
+        f"- [Mappa del sito]({SITE}/sitemap.xml): elenco di tutte le pagine",
+        "",
+    ]
+    for a in AREAS:
+        lines += [f"## Articoli recenti · {a}", ""]
+        for p in [x for x in posts if x["area"] == a][:12]:
+            lines.append(f"- [{plain(p['titolo'])}]({SITE}/articoli/{p['slug']}/): {p['estratto']}")
+        lines.append("")
+    (OUT / "llms.txt").write_text("\n".join(lines), encoding="utf-8")
+
     print(f"Generati {len(posts)} articoli in {OUT}")
 
 if __name__ == "__main__":

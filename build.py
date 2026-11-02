@@ -166,6 +166,7 @@ def build():
     shutil.copytree(ROOT / "assets" / "fonts", OUT / "assets" / "fonts")
     (OUT / "CNAME").write_text("domenicofraccalvieri.it\n")
     (OUT / ".nojekyll").write_text("")
+    shutil.copy(ROOT / "assets" / "BingSiteAuth.xml", OUT / "BingSiteAuth.xml")  # verifica Bing Webmaster Tools
     (OUT / "robots.txt").write_text(f"User-agent: *\nAllow: /\n\nSitemap: {SITE}/sitemap.xml\n")
 
     # articoli

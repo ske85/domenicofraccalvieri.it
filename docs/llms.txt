@@ -7,7 +7,7 @@
 - Formazione: laurea in Ingegneria gestionale al Politecnico di Bari; certificazione Utility Manager UNI 11782:2020.
 - Profilo LinkedIn: https://www.linkedin.com/in/domenico-fraccalvieri/
 - Questo sito riguarda solo il Domenico Fraccalvieri CFO in Puglia: non ha legami con professionisti omonimi di altri settori o Paesi.
-- Articoli pubblicati: 221 (Energia: 33, Finanza: 77, Valori: 51, Attualità: 60), aggiornati ogni giorno.
+- Articoli pubblicati: 223 (Energia: 33, Finanza: 78, Valori: 52, Attualità: 60), aggiornati ogni giorno.
 
 ## Pagine principali
 
@@ -33,6 +33,7 @@
 ## Articoli recenti · Finanza
 
 - [Partite IVA, "sale lo sconto fiscale sulle auto degli agenti di commercio".](https://domenicofraccalvieri.it/articoli/partite-iva-sale-lo-sconto-fiscale-sulle-auto-degli-agenti/): Un titolo che fa piacere leggere. Poi si fanno i conti.
+- [Quanto costa all'Italia un fisco che frena la crescita? Ho svolto un esercizio puramente teorico.](https://domenicofraccalvieri.it/articoli/quanto-costa-all-italia-un-fisco-che-frena-la-crescita-ho/): Tutte le cifre che seguono sono mie stime, costruite su dati ufficiali (Istat, Eurostat, MEF, INPS). Le ipotesi sono dichiarate perché chiunque possa verificarle.
 - [100 euro l’anno a ogni neonato: buona idea o goccia nel mare? 👶💶](https://domenicofraccalvieri.it/articoli/100-euro-lanno-a-ogni-neonato-buona-idea-o-goccia-nel-mare/): Ieri il CdM ha approvato la Manovra 2027. Tra le misure c’è un “salvadanaio previdenziale”: per ogni bambino nato dal 2027 l’INPS apre una posizione individuale, e lo Stato ci versa 100…
 - [Ex Ilva, la Cassazione chiude l'area a caldo. E con lei, probabilmente, l'ultimo ciclo integrale dell'acciaio in Italia.](https://domenicofraccalvieri.it/articoli/ex-ilva-la-cassazione-chiude-l-area-a-caldo-e-con-lei/): La salute dei tarantini viene prima di tutto, su questo non si discute. Ma ancora una volta non siamo riusciti a trovare una soluzione che guardasse al futuro, in termini strategici e di…
 - [Il Governo vuole farci andare in pensione prima… o pagarci di meno dopo?](https://domenicofraccalvieri.it/articoli/il-governo-vuole-farci-andare-in-pensione-prima-o-pagarci-di/): Un caso concreto: uscita anticipata contributiva a 64 anni, reddito pensionistico di 30mila euro.
@@ -43,10 +44,10 @@
 - [Sappiamo al centesimo quanto evadono gli italiani.](https://domenicofraccalvieri.it/articoli/sappiamo-al-centesimo-quanto-evadono-gli-italiani/): Non sappiamo quanto pagano in più del dovuto.
 - [Il tempo è il giudice più severo dei mercati.](https://domenicofraccalvieri.it/articoli/il-tempo-e-il-giudice-piu-severo-dei-mercati/): Nel 2011 l'Italia era il "malato d'Europa". Lo spread era il termometro della nostra fragilità e la Francia stava nel blocco dei virtuosi, accanto alla Germania.
 - [Il fatturato misura quanto vendiamo. Non quanto serviamo.](https://domenicofraccalvieri.it/articoli/il-fatturato-misura-quanto-vendiamo-non-quanto-serviamo/): Ho letto i dati di Confartigianato sull'export manifatturiero veneziano nel primo semestre 2026: oltre 4 miliardi di euro, +44,6%. Un numero impressionante. Ma quasi tutta la crescita viene…
-- [La BCE dà il via libera a UniCredit su Commerzbank.](https://domenicofraccalvieri.it/articoli/la-bce-da-il-via-libera-a-unicredit-su-commerzbank/): Francoforte ha autorizzato UniCredit a superare il 30% del capitale di Commerzbank e a salire ulteriormente, senza un tetto massimo.
 
 ## Articoli recenti · Valori
 
+- [Nel 1977 abbiamo lanciato il cuore oltre l'ostacolo. Si chiamava Voyager 1.](https://domenicofraccalvieri.it/articoli/nel-1977-abbiamo-lanciato-il-cuore-oltre-l-ostacolo-si/): Quasi cinquant'anni dopo è ancora lì, a viaggiare nello spazio interstellare. Il 18 novembre sarà a un giorno luce da casa: un segnale partito dalla Terra impiegherà 24 ore per raggiungerla.
 - [Forti con i deboli, deboli con i forti. E se facessimo il contrario?](https://domenicofraccalvieri.it/articoli/forti-con-i-deboli-deboli-con-i-forti-e-se-facessimo-il/): Ogni giorno la politica, in ogni parte del mondo, ci mostra lo stesso copione: la voce grossa con chi non può difendersi, il silenzio o l'inchino davanti a chi ha più potere.
 - [Quanto serve davvero per cambiare la vita delle persone che lavorano con noi?](https://domenicofraccalvieri.it/articoli/quanto-serve-davvero-per-cambiare-la-vita-delle-persone-che/): La frase attribuita a Brunello Cucinelli riapre una domanda che spesso poniamo come un aut-aut: profitto oppure persone.
 - [C'è un furto che fa rumore. E uno che non fa notizia.](https://domenicofraccalvieri.it/articoli/c-e-un-furto-che-fa-rumore-e-uno-che-non-fa-notizia/): L'arcivescovo di Milano, Mario Delpini, ha detto una cosa che merita di essere riletta con calma:
@@ -58,7 +59,6 @@
 - [Perché non scenderò mai in politica](https://domenicofraccalvieri.it/articoli/perche-non-scendero-mai-in-politica/): Non ho mai voluto fare politica, e non lo farò se il prezzo è perdere la libertà di non essere imparziale. Di dire quello che penso, senza pesare ogni parola su alleanze, equilibri e…
 - [Anche i giganti sbagliano. Ed è proprio così che crescono.](https://domenicofraccalvieri.it/articoli/anche-i-giganti-sbagliano-ed-e-proprio-cosi-che-crescono/): Bending Spoons è appena sbarcata al Nasdaq. Poche settimane dopo ha chiuso la più grande acquisizione della sua storia: Airtable, per oltre 1,2 miliardi di dollari.
 - [Riconoscere il merito: una responsabilità della leadership](https://domenicofraccalvieri.it/articoli/riconoscere-il-merito-una-responsabilita-della-leadership/): Un leader equo deve saper distinguere con chiarezza chi contribuisce in modo concreto ai risultati e chi, invece, se ne attribuisce il merito.
-- ["Empatia" è una delle parole più usate degli ultimi anni.](https://domenicofraccalvieri.it/articoli/empatia-e-una-delle-parole-piu-usate-degli-ultimi-anni/): Eppure, quante volte la vediamo davvero nei fatti?
 
 ## Articoli recenti · Attualità
 

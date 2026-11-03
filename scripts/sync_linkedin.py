@@ -227,7 +227,7 @@ def main():
         if not raw or not re.match(r"\d{4}-\d{2}-\d{2}", date):
             continue
         body, tags = paragraphs(raw)
-        body = [anonimizza.testo(b) for b in body]
+        body = anonimizza.paragrafi(body)
         tags = [t for t in tags if not anonimizza.TAG_VIETATI.search(t)]
         text = " ".join(body)
         if (len(text) < MIN_CHARS or post_id(link) in known_links or norm_text(text) in known_text

@@ -7,7 +7,7 @@
 - Formazione: laurea in Ingegneria gestionale al Politecnico di Bari; certificazione Utility Manager UNI 11782:2020.
 - Profilo LinkedIn: https://www.linkedin.com/in/domenico-fraccalvieri/
 - Questo sito riguarda solo il Domenico Fraccalvieri CFO in Puglia: non ha legami con professionisti omonimi di altri settori o Paesi.
-- Articoli pubblicati: 225 (Energia: 33, Finanza: 80, Valori: 52, Attualità: 60), aggiornati ogni giorno.
+- Articoli pubblicati: 226 (Energia: 33, Finanza: 80, Valori: 52, Attualità: 61), aggiornati ogni giorno.
 
 ## Pagine principali
 
@@ -62,6 +62,7 @@
 
 ## Articoli recenti · Attualità
 
+- [Qualche giorno fa, con la mia famiglia, siamo entrati in un ristorante a sfioro sul lago di Como.](https://domenicofraccalvieri.it/articoli/qualche-giorno-fa-con-la-mia-famiglia-siamo-entrati-in-un/): Cielo un po' cupo, ma dalla vetrata il panorama era comunque meraviglioso. Pensavo alla bellezza e alla grandezza dell'Italia, a quanto siamo fortunati ad avere luoghi così.
 - [Un data center che invece di consumare acqua la produce.](https://domenicofraccalvieri.it/articoli/un-data-center-che-invece-di-consumare-acqua-la-produce/): Negli Stati Uniti Endeavour e Trevi Systems hanno annunciato una partnership per usare il calore di scarto dei data center AI per dissalare acqua salmastra. Secondo le aziende si potrebbero…
 - [Robot umanoidi: la fase delle demo è finita. Chi vince davvero? 🤖](https://domenicofraccalvieri.it/articoli/robot-umanoidi-la-fase-delle-demo-e-finita-chi-vince-davvero/): Nel 2026 gli umanoidi sono usciti dai palchi e sono entrati in fabbrica. Ma ognuno dei 5 big punta su una strategia diversa, e ognuno ha un tallone d'Achille.
 - ["L'Europa ha dimenticato come si cresce."](https://domenicofraccalvieri.it/articoli/l-europa-ha-dimenticato-come-si-cresce/): John Cochrane, economista della Hoover Institution noto come "The Grumpy Economist", lo ha detto senza giri di parole al Festival Internazionale dell'Economia. Difficile dargli torto.
@@ -73,4 +74,3 @@
 - [Green Deal sì. Ma la guerra non ha firmato il patto.](https://domenicofraccalvieri.it/articoli/green-deal-si-ma-la-guerra-non-ha-firmato-il-patto/): Ci chiediamo, giustamente, quanto inquina un'auto, un volo, un data center. Molto più raramente ci chiediamo quanto inquina un conflitto.
 - [Riforma RC auto: il ministro Urso annuncia premi legati al comportamento del singolo guidatore e meno peso…](https://domenicofraccalvieri.it/articoli/riforma-rc-auto-il-ministro-urso-annuncia-premi-legati-al/): Riforma RC auto: il ministro Urso annuncia premi legati al comportamento del singolo guidatore e meno peso alla residenza. Obiettivo dichiarato: abbassare i prezzi al Sud, dove a Napoli si…
 - [Ci sono cose che non si possono anticipare.](https://domenicofraccalvieri.it/articoli/ci-sono-cose-che-non-si-possono-anticipare/): La "Tedesca" ci ha provato lo stesso. O forse qualcuno l'ha fatto per lei.
-- [Comprare l'accesso a una tecnologia non significa comprare il potere di usarla.](https://domenicofraccalvieri.it/articoli/comprare-l-accesso-a-una-tecnologia-non-significa-comprare/): Questo post mette a fuoco una questione che in Europa tendiamo a sottovalutare.

@@ -153,6 +153,68 @@ def upcoming(html_text):
                   lambda m: '<em class="soon">In programma</em> · ' if m.group(1) >= today else "", html_text)
 
 
+def num(v, d=2):
+    return f"{v:,.{d}f}".replace(",", "X").replace(".", ",").replace("X", ".")
+
+
+def pun_section():
+    """Specchietto con le medie mensili del PUN: grafico SVG statico, senza stili inline (rispetta la CSP)."""
+    f = ROOT / "pun.json"
+    if not f.exists(): return ""
+    data = json.load(open(f, encoding="utf-8"))
+    months = sorted(data["mesi"].items())[-13:]
+    if len(months) < 2: return ""
+    lab = lambda k: f"{MS[int(k[5:])-1]} {k[2:4]}"
+    last_k, last_v = months[-1]
+    prev_k, prev_v = months[-2]
+    ya_k = f"{int(last_k[:4])-1}{last_k[4:]}"
+    ya_v = data["mesi"].get(ya_k)
+    def delta(v, ref, what):
+        pc = (v - ref) / ref * 100
+        cls = "up" if pc > 0.5 else "down" if pc < -0.5 else "flat"
+        arrow = "▲" if cls == "up" else "▼" if cls == "down" else "■"
+        return f'<li class="{cls}"><b>{arrow} {"+" if pc > 0 else ""}{num(pc, 1)}%</b> {what}</li>'
+    deltas = delta(last_v, prev_v, f"su {MESI[int(prev_k[5:])-1]}")
+    if ya_v: deltas += delta(last_v, ya_v, f"su {MESI[int(ya_k[5:])-1]} {ya_k[:4]}")
+    # grafico: barre verticali, l'ultimo mese evidenziato
+    W, H, top, bottom, left = 640, 246, 26, 50, 30
+    n = len(months); slot = (W - left) / n; bw = slot * 0.62
+    vmax = max(v for _, v in months); scale = (H - top - bottom) / (vmax * 1.08)
+    grid = ""
+    step = 50
+    for g in range(step, int(vmax * 1.08) + 1, step):
+        y = H - bottom - g * scale
+        grid += f'<line class="g" x1="{left}" x2="{W}" y1="{y:.1f}" y2="{y:.1f}"/><text class="gl" x="0" y="{y + 4:.1f}">{g}</text>'
+    bars = ""
+    for i, (k, v) in enumerate(months):
+        x = left + i * slot + (slot - bw) / 2; h = v * scale; y = H - bottom - h
+        cls = "b last" if i == n - 1 else "b"
+        bars += (f'<g><title>{MESI[int(k[5:])-1].capitalize()} {k[:4]}: {num(v)} €/MWh</title>'
+                 f'<rect class="{cls}" x="{x:.1f}" y="{y:.1f}" width="{bw:.1f}" height="{h:.1f}" rx="3"/>'
+                 f'<text class="ml{" on" if i == n - 1 else ""}" x="{x + bw / 2:.1f}" y="{H - bottom + 20}" text-anchor="middle">{MS[int(k[5:])-1]}</text>')
+        if i == 0 or k[5:] == "01":
+            bars += f'<text class="yl" x="{x + bw / 2:.1f}" y="{H - 6}" text-anchor="middle">{k[:4]}</text>'
+        if i == n - 1 or v == vmax or i == 0:
+            bars += f'<text class="vl{" on" if i == n - 1 else ""}" x="{x + bw / 2:.1f}" y="{y - 7:.1f}" text-anchor="middle">{num(v, 0)}</text>'
+        bars += "</g>"
+    desc = ", ".join(f"{MESI[int(k[5:])-1]} {k[:4]} {num(v)}" for k, v in months)
+    svg = (f'<svg class="pun-chart" viewBox="0 0 {W} {H}" role="img" aria-labelledby="pun-t pun-d" preserveAspectRatio="xMidYMid meet">'
+           f'<title id="pun-t">PUN Index GME, media mensile in euro per MWh</title><desc id="pun-d">{esc(desc)}</desc>'
+           f'{grid}<line class="axis" x1="{left}" x2="{W}" y1="{H - bottom}" y2="{H - bottom}"/>{bars}</svg>')
+    agg = fmt(data["aggiornato"])
+    return f"""<section class="pun" data-area="Energia" aria-labelledby="pun-h">
+    <div class="pun-head">
+      <div><p class="label">Il prezzo dell'elettricità in Italia</p>
+        <h2 id="pun-h">PUN Index GME, media di {MESI[int(last_k[5:])-1]} {last_k[:4]}</h2></div>
+      <div class="pun-now"><span class="v">{num(last_v)}</span><span class="u">€/MWh</span>
+        <span class="kwh">≈ {num(last_v / 1000, 3)} €/kWh</span></div>
+    </div>
+    <ul class="pun-delta">{deltas}</ul>
+    {svg}
+    <p class="pun-note">Prezzo all'ingrosso della borsa elettrica (Mercato del Giorno Prima), medie mensili: non è il prezzo finale in bolletta, che comprende anche trasporto, oneri e imposte. Aggiornato il {agg}.<br>Fonte: {esc(data["fonte"])}</p>
+  </section>"""
+
+
 def build():
     if OUT.exists(): shutil.rmtree(OUT)
     (OUT / "assets").mkdir(parents=True)
@@ -232,6 +294,7 @@ def build():
   </div>
   <p class="empty" id="empty" hidden>Nessun articolo trovato. Prova con un'altra parola o un'altra area.</p>
   <div class="more"><button type="button" id="more" hidden>Mostra altri</button></div>
+  {pun_section()}
   <section class="home-about" aria-label="Chi sono">
     <img src="assets/ritratto.jpg" alt="Domenico Fraccalvieri" width="96" height="96">
     <div><p class="label">Chi sono</p>

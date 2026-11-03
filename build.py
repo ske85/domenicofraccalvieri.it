@@ -153,77 +153,6 @@ def upcoming(html_text):
                   lambda m: '<em class="soon">In programma</em> · ' if m.group(1) >= today else "", html_text)
 
 
-def num(v, d=2):
-    return f"{v:,.{d}f}".replace(",", "X").replace(".", ",").replace("X", ".")
-
-
-def price_panel(serie, uid):
-    """Un riquadro: valore dell'ultimo mese, variazioni e grafico a barre SVG statico (nessuno stile inline: rispetta la CSP)."""
-    mesi = serie["mesi"]
-    months = sorted(mesi.items())[-13:]
-    last_k, last_v = months[-1]
-    prev_k, prev_v = months[-2]
-    ya_k = f"{int(last_k[:4])-1}{last_k[4:]}"
-    ya_v = mesi.get(ya_k)
-    mname = lambda k: MESI[int(k[5:])-1]
-    def delta(v, ref, what):
-        pc = (v - ref) / ref * 100
-        arrow = "▲" if pc > 0.5 else "▼" if pc < -0.5 else "■"
-        return f'<li><b>{arrow} {"+" if pc > 0 else ""}{num(pc, 1)}%</b> {what}</li>'
-    deltas = delta(last_v, prev_v, f"su {mname(prev_k)}")
-    if ya_v: deltas += delta(last_v, ya_v, f"su {mname(ya_k)} {ya_k[:4]}")
-    W, H, top, bottom, left = 640, 246, 26, 50, 34
-    n = len(months); slot = (W - left) / n; bw = slot * 0.62
-    vmax = max(v for _, v in months); scale = (H - top - bottom) / (vmax * 1.1)
-    step = next(s for s in (10, 20, 25, 50, 100, 200) if vmax / s <= 5)
-    grid = ""
-    for g in range(step, int(vmax * 1.1) + 1, step):
-        y = H - bottom - g * scale
-        grid += f'<line class="g" x1="{left}" x2="{W}" y1="{y:.1f}" y2="{y:.1f}"/><text class="gl" x="0" y="{y + 4:.1f}">{g}</text>'
-    bars = ""
-    for i, (k, v) in enumerate(months):
-        x = left + i * slot + (slot - bw) / 2; h = v * scale; y = H - bottom - h
-        on = " on" if i == n - 1 else ""
-        bars += (f'<g><title>{mname(k).capitalize()} {k[:4]}: {num(v)} €/MWh</title>'
-                 f'<rect class="b{" last" if on else ""}" x="{x:.1f}" y="{y:.1f}" width="{bw:.1f}" height="{h:.1f}" rx="3"/>'
-                 f'<text class="ml{on}" x="{x + bw / 2:.1f}" y="{H - bottom + 20}" text-anchor="middle">{MS[int(k[5:])-1]}</text>')
-        if i == 0 or k[5:] == "01":
-            bars += f'<text class="yl" x="{x + bw / 2:.1f}" y="{H - 6}" text-anchor="middle">{k[:4]}</text>'
-        if on or i == 0:
-            bars += f'<text class="vl{on}" x="{x + bw / 2:.1f}" y="{y - 7:.1f}" text-anchor="middle">{num(v, 0)}</text>'
-        bars += "</g>"
-    desc = ", ".join(f"{mname(k)} {k[:4]} {num(v)}" for k, v in months)
-    svg = (f'<svg class="pchart" viewBox="0 0 {W} {H}" role="img" aria-labelledby="{uid}-t {uid}-d">'
-           f'<title id="{uid}-t">{esc(serie["nome"])}, {esc(serie["indice"])}: media mensile in euro per MWh</title><desc id="{uid}-d">{esc(desc)}</desc>'
-           f'{grid}<line class="axis" x1="{left}" x2="{W}" y1="{H - bottom}" y2="{H - bottom}"/>{bars}</svg>')
-    kwh = f'<span class="sub">≈ {num(last_v / 1000, 3)} €/kWh</span>' if serie.get("kwh") else '<span class="sub pad" aria-hidden="true">&nbsp;</span>'
-    return f"""<div class="price p-{serie['id']}">
-      <div class="price-head">
-        <div><p class="label">{esc(serie['nome'])}</p><h3>{esc(serie['indice'])} · media di {mname(last_k)} {last_k[:4]}</h3></div>
-        <div class="price-now"><span class="v">{num(last_v)}</span><span class="u">€/MWh</span>{kwh}</div>
-      </div>
-      <ul class="price-delta">{deltas}</ul>
-      {svg}
-    </div>"""
-
-
-def prices_section():
-    """Specchietto in fondo alla home con le medie mensili all'ingrosso di luce e gas (dati GME, aggiornati a mano)."""
-    f = ROOT / "prezzi.json"
-    if not f.exists(): return ""
-    data = json.load(open(f, encoding="utf-8"))
-    panels = "".join(price_panel(s, f"pc-{s['id']}") for s in data["serie"] if len(s["mesi"]) >= 2)
-    return f"""<section class="prices" aria-labelledby="prices-h">
-    <div class="prices-top"><p class="label">Il prezzo dell'energia in Italia</p>
-      <h2 id="prices-h">Luce e gas sulla borsa italiana, mese per mese</h2></div>
-    <div class="prices-grid">{panels}</div>
-    <p class="prices-daily"><span>Prezzi giorno per giorno sul sito del GME:</span>
-      <a href="https://gme.mercatoelettrico.org/it-it/Home/Esiti/Elettricita/MGP/Statistiche/SintesiMGP" target="_blank" rel="noopener">Luce (PUN) ↗</a>
-      <a href="https://gme.mercatoelettrico.org/it-it/Home/Esiti/Gas/MGP-GAS/Statistiche/Sintesi" target="_blank" rel="noopener">Gas (MGP-GAS) ↗</a></p>
-    <p class="prices-note">Medie mensili dei prezzi all'ingrosso: non sono il prezzo finale in bolletta, che comprende anche trasporto, oneri e imposte. Luce: PUN Index GME (Mercato del Giorno Prima). Gas: prezzo medio MGP-GAS, negoziazione continua. Aggiornato il {fmt(data["aggiornato"])}.<br>Fonte: {esc(data["fonte"])}</p>
-  </section>"""
-
-
 def build():
     if OUT.exists(): shutil.rmtree(OUT)
     (OUT / "assets").mkdir(parents=True)
@@ -303,7 +232,6 @@ def build():
   </div>
   <p class="empty" id="empty" hidden>Nessun articolo trovato. Prova con un'altra parola o un'altra area.</p>
   <div class="more"><button type="button" id="more" hidden>Mostra altri</button></div>
-  {prices_section()}
   <section class="home-about" aria-label="Chi sono">
     <img src="assets/ritratto.jpg" alt="Domenico Fraccalvieri" width="96" height="96">
     <div><p class="label">Chi sono</p>

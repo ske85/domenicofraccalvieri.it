@@ -310,6 +310,9 @@ main > .ec{margin-top:32px}
 .pchart .yl{font-size:13px; letter-spacing:.04em}
 .pchart .vl{font-size:16px; fill:var(--ink)}
 .pchart .on{fill:var(--ink); font-weight:500}
+.prices-daily{margin:0; display:flex; flex-wrap:wrap; align-items:center; gap:8px 18px; font-family:var(--f-mono); font-size:.82rem; color:var(--muted)}
+.prices-daily a{color:var(--accent); text-decoration:none; font-weight:500}
+.prices-daily a:hover{text-decoration:underline}
 .prices-note{margin:0; font-family:var(--f-mono); font-size:.72rem; line-height:1.55; color:var(--muted)}
 @media (max-width:860px){ .prices-grid{grid-template-columns:minmax(0,1fr)} .price-now .pad{display:none} .pchart .gl{font-size:11px} .pchart .ml{font-size:12px} .pchart .yl{font-size:11px} .pchart .vl{font-size:13px} }
 @media (max-width:640px){ .price{padding:16px 14px 12px} .pchart .gl{font-size:17px} .pchart .ml{font-size:19px} .pchart .yl{font-size:16px} .pchart .vl{font-size:21px} }

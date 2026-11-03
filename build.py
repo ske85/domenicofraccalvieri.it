@@ -217,6 +217,9 @@ def prices_section():
     <div class="prices-top"><p class="label">Il prezzo dell'energia in Italia</p>
       <h2 id="prices-h">Luce e gas sulla borsa italiana, mese per mese</h2></div>
     <div class="prices-grid">{panels}</div>
+    <p class="prices-daily"><span>Prezzi giorno per giorno sul sito del GME:</span>
+      <a href="https://gme.mercatoelettrico.org/it-it/Home/Esiti/Elettricita/MGP/Statistiche/SintesiMGP" target="_blank" rel="noopener">Luce (PUN) ↗</a>
+      <a href="https://gme.mercatoelettrico.org/it-it/Home/Esiti/Gas/MGP-GAS/Statistiche/Sintesi" target="_blank" rel="noopener">Gas (MGP-GAS) ↗</a></p>
     <p class="prices-note">Medie mensili dei prezzi all'ingrosso: non sono il prezzo finale in bolletta, che comprende anche trasporto, oneri e imposte. Luce: PUN Index GME (Mercato del Giorno Prima). Gas: prezzo medio MGP-GAS, negoziazione continua. Aggiornato il {fmt(data["aggiornato"])}.<br>Fonte: {esc(data["fonte"])}</p>
   </section>"""
 

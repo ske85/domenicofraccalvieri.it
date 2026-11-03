@@ -93,8 +93,9 @@ def page(title, desc, path, main, extra_head="", depth=0):
 {main}
   </main>
   <footer class="site">
-    <span>© {posts[0]["data"][:4]} {NAME}</span>
+    <span>© {posts[0]["data"][:4]} {NAME} · Tutti i diritti riservati</span>
     <a href="{LINKEDIN}" target="_blank" rel="noopener">LinkedIn ↗</a>
+    <span class="rights">Testi e immagini non possono essere copiati o ripubblicati senza autorizzazione. Puoi citarne brevi estratti indicando l'autore e il link all'articolo.</span>
     <span class="privacy">Questo sito non usa cookie, non raccoglie dati e non traccia i visitatori.</span>
   </footer>
 </div>
@@ -197,6 +198,7 @@ def build():
         ld = jsonld({"@context": "https://schema.org", "@type": "BlogPosting", "headline": plain(p["titolo"])[:110],
                      "description": p["estratto"], "datePublished": p["data"], "inLanguage": "it-IT",
                      "articleSection": p["area"], "keywords": p["hashtag"], "author": PERSON,
+                     "copyrightHolder": {"@type": "Person", "name": NAME}, "copyrightYear": int(p["data"][:4]),
                      "mainEntityOfPage": f"{SITE}/articoli/{p['slug']}/"})
         d = OUT / "articoli" / p["slug"]; d.mkdir(parents=True)
         (d / "index.html").write_text(page(f"{plain(p['titolo'])} · {NAME}", p["estratto"], f"/articoli/{p['slug']}/", main,

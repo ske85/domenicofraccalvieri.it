@@ -7,6 +7,9 @@ Stampa solo conteggi e titoli: i log di un repository pubblico sono visibili a t
 import json, os, re, sys, unicodedata, urllib.request, urllib.error, urllib.parse
 from pathlib import Path
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import anonimizza  # nomi da non pubblicare mai
+
 ROOT = Path(__file__).resolve().parent.parent
 POSTS = ROOT / "posts.json"
 API = "https://api.linkedin.com/rest/memberSnapshotData"
@@ -224,6 +227,8 @@ def main():
         if not raw or not re.match(r"\d{4}-\d{2}-\d{2}", date):
             continue
         body, tags = paragraphs(raw)
+        body = [anonimizza.testo(b) for b in body]
+        tags = [t for t in tags if not anonimizza.TAG_VIETATI.search(t)]
         text = " ".join(body)
         if (len(text) < MIN_CHARS or post_id(link) in known_links or norm_text(text) in known_text
                 or norm_text(" ".join(body[1:])) in known_text):

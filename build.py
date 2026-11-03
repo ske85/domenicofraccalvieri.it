@@ -18,7 +18,12 @@ AREAS = ["Energia", "Finanza", "Valori", "Attualità"]
 MESI = ["gennaio","febbraio","marzo","aprile","maggio","giugno","luglio","agosto","settembre","ottobre","novembre","dicembre"]
 MS = ["gen","feb","mar","apr","mag","giu","lug","ago","set","ott","nov","dic"]
 
-posts = sorted(json.load(open(ROOT / "posts.json", encoding="utf-8")), key=lambda p: p["data"], reverse=True)
+import sys
+sys.path.insert(0, str(ROOT / "scripts"))
+import anonimizza  # nomi da non pubblicare mai: vale per ogni articolo, anche per quelli futuri
+
+posts = sorted((anonimizza.post(p) for p in json.load(open(ROOT / "posts.json", encoding="utf-8"))),
+               key=lambda p: p["data"], reverse=True)
 
 esc = lambda s: html.escape(str(s), quote=True)
 def fmt(d):

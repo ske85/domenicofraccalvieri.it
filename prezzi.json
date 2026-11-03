@@ -1,0 +1,15 @@
+{
+ "nota": "Medie mensili GME in €/MWh. Da aggiornare a mano una volta al mese, dopo la chiusura del mese: le condizioni d'uso del GME vietano l'estrazione automatica dei dati. Gas: media aritmetica dei prezzi giornalieri MGP-GAS (negoziazione continua), lo stesso metodo del riepilogo mensile GME.",
+ "fonte": "Gestore dei Mercati Energetici S.p.A.",
+ "aggiornato": "2026-11-03",
+ "serie": [
+  {"id": "luce", "nome": "Elettricità", "indice": "PUN Index GME", "kwh": true,
+   "mesi": {"2025-10": 111.04, "2025-11": 117.09, "2025-12": 115.49, "2026-01": 132.66, "2026-02": 114.41,
+            "2026-03": 143.40, "2026-04": 119.47, "2026-05": 119.35, "2026-06": 132.50, "2026-07": 157.04,
+            "2026-08": 180.00, "2026-09": 207.54, "2026-10": 230.82}},
+  {"id": "gas", "nome": "Gas naturale", "indice": "MGP-GAS GME", "kwh": false,
+   "mesi": {"2025-10": 32.928, "2025-11": 32.541, "2025-12": 30.651, "2026-01": 37.711, "2026-02": 35.103,
+            "2026-03": 52.507, "2026-04": 46.411, "2026-05": 47.136, "2026-06": 47.166, "2026-07": 56.411,
+            "2026-08": 64.405, "2026-09": 78.826, "2026-10": 88.116}}
+ ]
+}

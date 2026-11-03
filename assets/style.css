@@ -281,31 +281,35 @@ main > .ec{margin-top:32px}
 .gallery img{width:100%; height:auto; aspect-ratio:4/5; object-fit:cover; border-radius:6px; display:block}
 @media (max-width:520px){ .gallery{grid-template-columns:repeat(2,minmax(0,1fr))} .gallery li:last-child{display:none} }
 
-/* Specchietto PUN in fondo alla home: grafico SVG statico, colori dai token */
-.pun{display:grid; gap:14px; padding:24px 22px 18px; margin-block:8px 0; background:var(--surface); border:1px solid var(--rule); border-top:3px solid var(--a-energia); border-radius:4px}
-.pun .label{color:var(--a-energia)}
-.pun-head{display:flex; flex-wrap:wrap; justify-content:space-between; align-items:end; gap:10px 24px}
-.pun-head h2{margin:4px 0 0; font-family:var(--f-display); font-weight:700; font-size:1.25rem; line-height:1.25; letter-spacing:-.01em}
-.pun-now{display:grid; grid-template-columns:auto auto; align-items:baseline; column-gap:6px; justify-items:end}
-.pun-now .v{font-family:var(--f-display); font-weight:800; font-size:2.6rem; line-height:1; letter-spacing:-.02em; font-variant-numeric:tabular-nums}
-.pun-now .u{font-family:var(--f-mono); font-size:.8rem; color:var(--muted)}
-.pun-now .kwh{grid-column:1 / -1; font-family:var(--f-mono); font-size:.78rem; color:var(--muted)}
-.pun-delta{list-style:none; margin:0; padding:0; display:flex; flex-wrap:wrap; gap:6px 22px; font-family:var(--f-mono); font-size:.8rem; color:var(--muted)}
-.pun-delta b{font-weight:500; color:var(--ink)}
-.pun-delta .up b{color:var(--a-energia)}
-.pun-delta .down b{color:var(--a-attualita)}
-.pun-chart{display:block; width:100%; height:auto}
-.pun-chart .b{fill:var(--accent-soft)}
-.pun-chart .b.last{fill:var(--a-energia)}
-.pun-chart g:hover .b{fill:var(--a-energia); opacity:.75}
-.pun-chart g:hover .b.last{opacity:1}
-.pun-chart .g{stroke:var(--rule); stroke-width:1; stroke-dasharray:2 4}
-.pun-chart .axis{stroke:var(--muted); stroke-width:1}
-.pun-chart text{font-family:var(--f-mono); fill:var(--muted)}
-.pun-chart .gl{font-size:9.5px}
-.pun-chart .ml{font-size:10.5px}
-.pun-chart .vl{font-size:11.5px; fill:var(--ink)}
-.pun-chart .yl{font-size:9.5px; letter-spacing:.04em}
-.pun-chart .on{fill:var(--ink); font-weight:500}
-.pun-note{margin:0; font-family:var(--f-mono); font-size:.72rem; line-height:1.55; color:var(--muted)}
-@media (max-width:640px){ .pun{padding:18px 14px 14px} .pun-now{justify-items:start} .pun-chart .ml{font-size:19px} .pun-chart .vl{font-size:21px} .pun-chart .gl{font-size:17px} .pun-chart .yl{font-size:16px} }
+/* Specchietto prezzi luce e gas in fondo alla home: grafici SVG statici, colori dai token */
+.prices{display:grid; gap:16px; padding-block:12px 36px}
+.prices-top h2{margin:4px 0 0; font-family:var(--f-display); font-weight:700; font-size:1.45rem; line-height:1.2; letter-spacing:-.01em}
+.prices-top .label{color:var(--a-energia)}
+.prices-grid{display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:16px}
+.price{--c:var(--a-energia); display:grid; gap:12px; align-content:start; padding:20px 20px 14px; background:var(--surface); border:1px solid var(--rule); border-top:3px solid var(--c); border-radius:4px}
+.price.p-gas{--c:var(--a-finanza)}
+.price .label{color:var(--c)}
+.price-head{display:grid; gap:10px}
+.price-head h3{margin:4px 0 0; font-family:var(--f-display); font-weight:700; font-size:1.05rem; line-height:1.25; letter-spacing:-.01em}
+.price-now{display:grid; grid-template-columns:auto auto; justify-content:start; align-items:baseline; column-gap:6px}
+.price-now .v{font-family:var(--f-display); font-weight:800; font-size:2.2rem; line-height:1; letter-spacing:-.02em; font-variant-numeric:tabular-nums}
+.price-now .u{font-family:var(--f-mono); font-size:.78rem; color:var(--muted)}
+.price-now .sub{grid-column:1 / -1; font-family:var(--f-mono); font-size:.75rem; color:var(--muted)}
+.price-delta{list-style:none; margin:0; padding:0; display:flex; flex-wrap:wrap; gap:4px 18px; font-family:var(--f-mono); font-size:.78rem; color:var(--muted)}
+.price-delta b{font-weight:500; color:var(--ink)}
+.pchart{display:block; width:100%; height:auto}
+.pchart .b{fill:var(--c); fill-opacity:.22}
+.pchart .b.last{fill-opacity:1}
+.pchart g:hover .b{fill-opacity:.55}
+.pchart g:hover .b.last{fill-opacity:1}
+.pchart .g{stroke:var(--rule); stroke-width:1; stroke-dasharray:2 4}
+.pchart .axis{stroke:var(--muted); stroke-width:1}
+.pchart text{font-family:var(--f-mono); fill:var(--muted)}
+.pchart .gl{font-size:13px}
+.pchart .ml{font-size:14.5px}
+.pchart .yl{font-size:13px; letter-spacing:.04em}
+.pchart .vl{font-size:16px; fill:var(--ink)}
+.pchart .on{fill:var(--ink); font-weight:500}
+.prices-note{margin:0; font-family:var(--f-mono); font-size:.72rem; line-height:1.55; color:var(--muted)}
+@media (max-width:860px){ .prices-grid{grid-template-columns:minmax(0,1fr)} .price-now .pad{display:none} .pchart .gl{font-size:11px} .pchart .ml{font-size:12px} .pchart .yl{font-size:11px} .pchart .vl{font-size:13px} }
+@media (max-width:640px){ .price{padding:16px 14px 12px} .pchart .gl{font-size:17px} .pchart .ml{font-size:19px} .pchart .yl{font-size:16px} .pchart .vl{font-size:21px} }

@@ -7,7 +7,7 @@
 - Formazione: laurea in Ingegneria gestionale al Politecnico di Bari; certificazione Utility Manager UNI 11782:2020.
 - Profilo LinkedIn: https://www.linkedin.com/in/domenico-fraccalvieri/
 - Questo sito riguarda solo il Domenico Fraccalvieri CFO in Puglia: non ha legami con professionisti omonimi di altri settori o Paesi.
-- Articoli pubblicati: 226 (Energia: 33, Finanza: 80, Valori: 52, Attualità: 61), aggiornati ogni giorno.
+- Articoli pubblicati: 229 (Energia: 34, Finanza: 81, Valori: 52, Attualità: 62), aggiornati ogni giorno.
 
 ## Pagine principali
 
@@ -17,6 +17,7 @@
 
 ## Articoli recenti · Energia
 
+- [Bollette del gas: a ottobre 2026 forse il prezzo più alto di sempre. Ma il motivo non è quello che pensiamo.](https://domenicofraccalvieri.it/articoli/bollette-del-gas-a-ottobre-2026-forse-il-prezzo-piu-alto-di/): In tv hanno mostrato un confronto molto chiaro (dati pubblicati dall'ente regolatore, centesimi per metro cubo):
 - [Energia: il tempo è un costo. E lo stiamo pagando tutti.](https://domenicofraccalvieri.it/articoli/energia-il-tempo-e-un-costo-e-lo-stiamo-pagando-tutti/): Ieri il Consiglio dei ministri ha rinviato, ancora una volta, il decreto per ridurre il costo di luce e gas per famiglie e imprese. Motivo ufficiale: "modifiche tecniche". Appuntamento al…
 - [Perché un Comune non può ragionare come un'azienda? 🏛️](https://domenicofraccalvieri.it/articoli/perche-un-comune-non-puo-ragionare-come-un-azienda/): Ne parlo da anni. E ogni volta la reazione è la stessa: scetticismo. "Il pubblico è un'altra cosa."
 - [Quali regioni italiane stanno facendo davvero di più per il fotovoltaico?](https://domenicofraccalvieri.it/articoli/quali-regioni-italiane-stanno-facendo-davvero-di-piu-per-il/): Guardare i MW installati in valore assoluto dice poco: le regioni hanno dimensioni molto diverse. Per una classifica equa conviene rapportare la potenza totale (a terra e sui tetti) alla…
@@ -28,10 +29,10 @@
 - ["650 euro l'anno di bolletta". Ma in quale Italia?](https://domenicofraccalvieri.it/articoli/650-euro-l-anno-di-bolletta-ma-in-quale-italia/): Ieri a SkyTG24 il presidente di ARERA ha detto che la spesa annua del "cliente tipo" è passata da 600 a 650 euro.
 - [Sole + mare = acqua potabile. La Spagna ci sta già lavorando. E l'Italia?](https://domenicofraccalvieri.it/articoli/sole-mare-acqua-potabile-la-spagna-ci-sta-gia-lavorando-e-l/): In questi anni il governo spagnolo ha stanziato 600 milioni di euro, tramite la società pubblica Acuamed, per nuovi impianti di desalinizzazione alimentati da parchi fotovoltaici. Una…
 - [Una grande compagnia taglia i prezzi alla pompa: trovata di marketing o gesto da benefattore?](https://domenicofraccalvieri.it/articoli/una-grande-compagnia-taglia-i-prezzi-alla-pompa-trovata-di/): 1,99 €/l per la benzina, 2,19 €/l per il gasolio. Per chi fa il pieno è una buona notizia.
-- [Caro energia: Bruxelles riapre il manuale del 2022.](https://domenicofraccalvieri.it/articoli/caro-energia-bruxelles-riapre-il-manuale-del-2022/): Il commissario Ue all'Energia Dan Jorgensen ha scritto ai 27 ministri dell'energia, Italia compresa, chiedendo di rimettere in campo misure simili a quelle adottate durante la crisi del…
 
 ## Articoli recenti · Finanza
 
+- [Stamattina scorrevo i conti di Ferrari: utile a 431 milioni (+13%) e ricavi a 1,9 miliardi.](https://domenicofraccalvieri.it/articoli/stamattina-scorrevo-i-conti-di-ferrari-utile-a-431-milioni/): Stamattina scorrevo i conti di Ferrari: utile a 431 milioni (+13%) e ricavi a 1,9 miliardi. Un altro trimestre record. Pochi giorni fa Stellantis ha chiuso il suo con una perdita di quasi…
 - [Chiediamo alla manovra cose che una manovra non può fare.](https://domenicofraccalvieri.it/articoli/chiediamo-alla-manovra-cose-che-una-manovra-non-puo-fare/): Leggo che la manifattura italiana arretra e resta indietro rispetto all'Eurozona. E subito parte la domanda: perché la legge di bilancio non punta su investimenti strutturali e…
 - [Manovra 2027: cosa cambia davvero per lavoratori, giovani e partite IVA 📊](https://domenicofraccalvieri.it/articoli/manovra-2027-cosa-cambia-davvero-per-lavoratori-giovani-e/): Il Disegno di Legge di Bilancio 2027 è stato bollinato dalla Ragioneria ed è arrivato in Parlamento. Ecco le misure da tenere d’occhio:
 - [Partite IVA, "sale lo sconto fiscale sulle auto degli agenti di commercio".](https://domenicofraccalvieri.it/articoli/partite-iva-sale-lo-sconto-fiscale-sulle-auto-degli-agenti/): Un titolo che fa piacere leggere. Poi si fanno i conti.
@@ -43,7 +44,6 @@
 - [Leggo che nella prossima manovra è allo studio un'altra stretta sui crediti d'imposta e sulle società "apri e chiudi".](https://domenicofraccalvieri.it/articoli/leggo-che-nella-prossima-manovra-e-allo-studio-un-altra/): Sia chiaro: chi usa le partite Iva come scatole vuote per frodare va fermato. Nessun dubbio.
 - [Il 5 novembre sarò a Milano tra gli speaker di Finance & Digital Talks – "Il CFO e il Cambiamento Digitale"…](https://domenicofraccalvieri.it/articoli/il-5-novembre-saro-a-milano-tra-gli-speaker-di-finance/): Il 5 novembre sarò a Milano tra gli speaker di Finance & Digital Talks – "Il CFO e il Cambiamento Digitale", organizzato da Soiel International. 🎙️
 - [Quando spendiamo 1 euro, quanti centesimi restano davvero in Italia?](https://domenicofraccalvieri.it/articoli/quando-spendiamo-1-euro-quanti-centesimi-restano-davvero-in/): Ho messo in fila i dati. La risposta sorprende due volte.
-- [Sappiamo al centesimo quanto evadono gli italiani.](https://domenicofraccalvieri.it/articoli/sappiamo-al-centesimo-quanto-evadono-gli-italiani/): Non sappiamo quanto pagano in più del dovuto.
 
 ## Articoli recenti · Valori
 
@@ -63,6 +63,7 @@
 ## Articoli recenti · Attualità
 
 - [Qualche giorno fa, con la mia famiglia, siamo entrati in un ristorante a sfioro sul lago di Como.](https://domenicofraccalvieri.it/articoli/qualche-giorno-fa-con-la-mia-famiglia-siamo-entrati-in-un/): Cielo un po' cupo, ma dalla vetrata il panorama era comunque meraviglioso. Pensavo alla bellezza e alla grandezza dell'Italia, a quanto siamo fortunati ad avere luoghi così.
+- [Targa personalizzata: in Germania 12,80 €. In Italia 600 €.](https://domenicofraccalvieri.it/articoli/targa-personalizzata-in-germania-12-80-in-italia-600/): Il nuovo Codice della Strada introduce le targhe personalizzate: 600 € per un'auto, 360 € per una moto, operative non prima del 2028.
 - [Un data center che invece di consumare acqua la produce.](https://domenicofraccalvieri.it/articoli/un-data-center-che-invece-di-consumare-acqua-la-produce/): Negli Stati Uniti Endeavour e Trevi Systems hanno annunciato una partnership per usare il calore di scarto dei data center AI per dissalare acqua salmastra. Secondo le aziende si potrebbero…
 - [Robot umanoidi: la fase delle demo è finita. Chi vince davvero? 🤖](https://domenicofraccalvieri.it/articoli/robot-umanoidi-la-fase-delle-demo-e-finita-chi-vince-davvero/): Nel 2026 gli umanoidi sono usciti dai palchi e sono entrati in fabbrica. Ma ognuno dei 5 big punta su una strategia diversa, e ognuno ha un tallone d'Achille.
 - ["L'Europa ha dimenticato come si cresce."](https://domenicofraccalvieri.it/articoli/l-europa-ha-dimenticato-come-si-cresce/): John Cochrane, economista della Hoover Institution noto come "The Grumpy Economist", lo ha detto senza giri di parole al Festival Internazionale dell'Economia. Difficile dargli torto.
@@ -73,4 +74,3 @@
 - [Abbiamo cinque supercomputer. Ma le imprese che usano l'AI sono meno della media europea.](https://domenicofraccalvieri.it/articoli/abbiamo-cinque-supercomputer-ma-le-imprese-che-usano-l-ai/): Le stime OCSE presentate il 19 ottobre a Roma mettono a fuoco un paradosso tutto italiano:
 - [Green Deal sì. Ma la guerra non ha firmato il patto.](https://domenicofraccalvieri.it/articoli/green-deal-si-ma-la-guerra-non-ha-firmato-il-patto/): Ci chiediamo, giustamente, quanto inquina un'auto, un volo, un data center. Molto più raramente ci chiediamo quanto inquina un conflitto.
 - [Riforma RC auto: il ministro Urso annuncia premi legati al comportamento del singolo guidatore e meno peso…](https://domenicofraccalvieri.it/articoli/riforma-rc-auto-il-ministro-urso-annuncia-premi-legati-al/): Riforma RC auto: il ministro Urso annuncia premi legati al comportamento del singolo guidatore e meno peso alla residenza. Obiettivo dichiarato: abbassare i prezzi al Sud, dove a Napoli si…
-- [Ci sono cose che non si possono anticipare.](https://domenicofraccalvieri.it/articoli/ci-sono-cose-che-non-si-possono-anticipare/): La "Tedesca" ci ha provato lo stesso. O forse qualcuno l'ha fatto per lei.

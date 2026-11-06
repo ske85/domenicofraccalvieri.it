@@ -1,5 +1,5 @@
 {
- "post_ricevuti_da_linkedin": 356,
+ "post_ricevuti_da_linkedin": 364,
  "campi": [
   "Date",
   "MediaUrl",
@@ -9,20 +9,20 @@
   "Visibility"
  ],
  "post_piu_recente_su_linkedin": "2026-11-04",
- "articoli_sul_sito": 231,
+ "articoli_sul_sito": 233,
  "diagnosi": {
   "risposta_post": "200, elementi: 1",
   "eventi_registro": {
-   "invitations:ACTION": 125,
-   "socialActions/likes:CREATE": 399,
-   "ugcPosts:UPDATE": 7,
+   "socialActions/likes:CREATE": 409,
    "ugcPosts:CREATE": 62,
-   "messages:CREATE": 95,
+   "invitations:ACTION": 129,
+   "messages:CREATE": 96,
    "endorsement:DELETE": 1,
    "endorsement:CREATE": 3,
    "socialActions/comments:CREATE": 10,
+   "ugcPosts:UPDATE": 6,
    "ugcPosts:DELETE": 2,
-   "instantReposts:CREATE": 2,
+   "instantReposts:CREATE": 4,
    "messages:UPDATE": 1,
    "socialActions/likes:DELETE": 1,
    "people:PARTIAL_UPDATE": 1,

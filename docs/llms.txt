@@ -7,7 +7,7 @@
 - Formazione: laurea in Ingegneria gestionale al Politecnico di Bari; certificazione Utility Manager UNI 11782:2020.
 - Profilo LinkedIn: https://www.linkedin.com/in/domenico-fraccalvieri/
 - Questo sito riguarda solo il Domenico Fraccalvieri CFO in Puglia: non ha legami con professionisti omonimi di altri settori o Paesi.
-- Articoli pubblicati: 231 (Energia: 34, Finanza: 81, Valori: 53, Attualità: 63), aggiornati ogni giorno.
+- Articoli pubblicati: 233 (Energia: 35, Finanza: 81, Valori: 53, Attualità: 64), aggiornati ogni giorno.
 
 ## Pagine principali
 
@@ -18,6 +18,7 @@
 ## Articoli recenti · Energia
 
 - [Bollette del gas: a ottobre 2026 forse il prezzo più alto di sempre. Ma il motivo non è quello che pensiamo.](https://domenicofraccalvieri.it/articoli/bollette-del-gas-a-ottobre-2026-forse-il-prezzo-piu-alto-di/): In tv hanno mostrato un confronto molto chiaro (dati pubblicati dall'ente regolatore, centesimi per metro cubo):
+- [Due italiani, due visioni opposte del mondo. E 900.000 ettari di Patagonia in mezzo.](https://domenicofraccalvieri.it/articoli/due-italiani-due-visioni-opposte-del-mondo-e-900-000-ettari/): Dopo 35 anni, i Benetton lasciano l’Argentina. Edizione vende Compañía de Tierras Sud e Ganadera Cóndor (oltre 900 mila ettari, circa 280 mila pecore, quasi un milione di kg di lana l’anno)…
 - [Energia: il tempo è un costo. E lo stiamo pagando tutti.](https://domenicofraccalvieri.it/articoli/energia-il-tempo-e-un-costo-e-lo-stiamo-pagando-tutti/): Ieri il Consiglio dei ministri ha rinviato, ancora una volta, il decreto per ridurre il costo di luce e gas per famiglie e imprese. Motivo ufficiale: "modifiche tecniche". Appuntamento al…
 - [Perché un Comune non può ragionare come un'azienda? 🏛️](https://domenicofraccalvieri.it/articoli/perche-un-comune-non-puo-ragionare-come-un-azienda/): Ne parlo da anni. E ogni volta la reazione è la stessa: scetticismo. "Il pubblico è un'altra cosa."
 - [Quali regioni italiane stanno facendo davvero di più per il fotovoltaico?](https://domenicofraccalvieri.it/articoli/quali-regioni-italiane-stanno-facendo-davvero-di-piu-per-il/): Guardare i MW installati in valore assoluto dice poco: le regioni hanno dimensioni molto diverse. Per una classifica equa conviene rapportare la potenza totale (a terra e sui tetti) alla…
@@ -28,7 +29,6 @@
 - [Telemarketing luce e gas: una regola uguale per tutti, ma solo finché non disturba i grandi?](https://domenicofraccalvieri.it/articoli/telemarketing-luce-e-gas-una-regola-uguale-per-tutti-ma-solo/): Dal 19 giugno nessuno può proporre contratti di luce e gas al telefono senza il consenso esplicito del cliente. È una norma giusta e l'ho accolta con favore. Le piccole aziende energetiche…
 - ["650 euro l'anno di bolletta". Ma in quale Italia?](https://domenicofraccalvieri.it/articoli/650-euro-l-anno-di-bolletta-ma-in-quale-italia/): Ieri a SkyTG24 il presidente di ARERA ha detto che la spesa annua del "cliente tipo" è passata da 600 a 650 euro.
 - [Sole + mare = acqua potabile. La Spagna ci sta già lavorando. E l'Italia?](https://domenicofraccalvieri.it/articoli/sole-mare-acqua-potabile-la-spagna-ci-sta-gia-lavorando-e-l/): In questi anni il governo spagnolo ha stanziato 600 milioni di euro, tramite la società pubblica Acuamed, per nuovi impianti di desalinizzazione alimentati da parchi fotovoltaici. Una…
-- [Una grande compagnia taglia i prezzi alla pompa: trovata di marketing o gesto da benefattore?](https://domenicofraccalvieri.it/articoli/una-grande-compagnia-taglia-i-prezzi-alla-pompa-trovata-di/): 1,99 €/l per la benzina, 2,19 €/l per il gasolio. Per chi fa il pieno è una buona notizia.
 
 ## Articoli recenti · Finanza
 
@@ -65,6 +65,7 @@
 - [Midterm: per la stabilità globale è uno scenario migliore o peggiore?](https://domenicofraccalvieri.it/articoli/midterm-per-la-stabilita-globale-e-uno-scenario-migliore-o/): Stamattina il quadro è chiaro solo a metà. I Democratici hanno conquistato sia la Camera sia il Senato. Lo spoglio non è ancora chiuso, ma il controllo del Congresso è deciso.
 - [Qualche giorno fa, con la mia famiglia, siamo entrati in un ristorante a sfioro sul lago di Como.](https://domenicofraccalvieri.it/articoli/qualche-giorno-fa-con-la-mia-famiglia-siamo-entrati-in-un/): Cielo un po' cupo, ma dalla vetrata il panorama era comunque meraviglioso. Pensavo alla bellezza e alla grandezza dell'Italia, a quanto siamo fortunati ad avere luoghi così.
 - [Targa personalizzata: in Germania 12,80 €. In Italia 600 €.](https://domenicofraccalvieri.it/articoli/targa-personalizzata-in-germania-12-80-in-italia-600/): Il nuovo Codice della Strada introduce le targhe personalizzate: 600 € per un'auto, 360 € per una moto, operative non prima del 2028.
+- [Storia di ordinaria burocrazia italiana. Niente nomi, niente enti: solo i fatti.](https://domenicofraccalvieri.it/articoli/storia-di-ordinaria-burocrazia-italiana-niente-nomi-niente/): Premessa: se vuoi comunicare dei numeri e dare certezza che siano corretti, cosa fa una persona seria?
 - [Un data center che invece di consumare acqua la produce.](https://domenicofraccalvieri.it/articoli/un-data-center-che-invece-di-consumare-acqua-la-produce/): Negli Stati Uniti Endeavour e Trevi Systems hanno annunciato una partnership per usare il calore di scarto dei data center AI per dissalare acqua salmastra. Secondo le aziende si potrebbero…
 - [Robot umanoidi: la fase delle demo è finita. Chi vince davvero? 🤖](https://domenicofraccalvieri.it/articoli/robot-umanoidi-la-fase-delle-demo-e-finita-chi-vince-davvero/): Nel 2026 gli umanoidi sono usciti dai palchi e sono entrati in fabbrica. Ma ognuno dei 5 big punta su una strategia diversa, e ognuno ha un tallone d'Achille.
 - ["L'Europa ha dimenticato come si cresce."](https://domenicofraccalvieri.it/articoli/l-europa-ha-dimenticato-come-si-cresce/): John Cochrane, economista della Hoover Institution noto come "The Grumpy Economist", lo ha detto senza giri di parole al Festival Internazionale dell'Economia. Difficile dargli torto.
@@ -73,4 +74,3 @@
 - [L'Italia è prima in Europa per soldi persi al gioco: 355 € a testa nel 2023, contro una media UE di 216 €.](https://domenicofraccalvieri.it/articoli/l-italia-e-prima-in-europa-per-soldi-persi-al-gioco-355-a/): Viene spontaneo chiedersi se sia un fallimento dello Stato. Secondo me la risposta è più scomoda: lo Stato non è assente, è socio.
 - [Stasera sono entrato nello store storico di un club famoso.](https://domenicofraccalvieri.it/articoli/stasera-sono-entrato-nello-store-storico-di-un-club-famoso/): Ho chiesto una maglia da personalizzare: numero 4, nome "Javier".
 - [Abbiamo cinque supercomputer. Ma le imprese che usano l'AI sono meno della media europea.](https://domenicofraccalvieri.it/articoli/abbiamo-cinque-supercomputer-ma-le-imprese-che-usano-l-ai/): Le stime OCSE presentate il 19 ottobre a Roma mettono a fuoco un paradosso tutto italiano:
-- [Green Deal sì. Ma la guerra non ha firmato il patto.](https://domenicofraccalvieri.it/articoli/green-deal-si-ma-la-guerra-non-ha-firmato-il-patto/): Ci chiediamo, giustamente, quanto inquina un'auto, un volo, un data center. Molto più raramente ci chiediamo quanto inquina un conflitto.

@@ -1,5 +1,5 @@
 {
- "post_ricevuti_da_linkedin": 364,
+ "post_ricevuti_da_linkedin": 362,
  "campi": [
   "Date",
   "MediaUrl",
@@ -13,10 +13,10 @@
  "diagnosi": {
   "risposta_post": "200, elementi: 1",
   "eventi_registro": {
-   "socialActions/likes:CREATE": 409,
-   "ugcPosts:CREATE": 62,
-   "invitations:ACTION": 129,
-   "messages:CREATE": 96,
+   "socialActions/likes:CREATE": 401,
+   "ugcPosts:CREATE": 60,
+   "invitations:ACTION": 137,
+   "messages:CREATE": 103,
    "endorsement:DELETE": 1,
    "endorsement:CREATE": 3,
    "socialActions/comments:CREATE": 10,

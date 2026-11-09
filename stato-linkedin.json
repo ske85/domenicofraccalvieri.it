@@ -13,20 +13,9 @@
  "diagnosi": {
   "risposta_post": "200, elementi: 1",
   "eventi_registro": {
-   "invitations:ACTION": 134,
-   "socialActions/likes:CREATE": 408,
    "ugcPosts:CREATE": 59,
-   "messages:CREATE": 104,
-   "endorsement:DELETE": 1,
-   "endorsement:CREATE": 3,
-   "socialActions/comments:CREATE": 10,
    "ugcPosts:UPDATE": 6,
-   "ugcPosts:DELETE": 2,
-   "instantReposts:CREATE": 4,
-   "messages:UPDATE": 1,
-   "socialActions/likes:DELETE": 1,
-   "people:PARTIAL_UPDATE": 1,
-   "people/positions:PARTIAL_UPDATE": 1
+   "ugcPosts:DELETE": 2
   }
  }
 }

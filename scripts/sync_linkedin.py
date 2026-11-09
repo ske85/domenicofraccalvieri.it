@@ -128,7 +128,8 @@ def fetch_changelog(token):
         if last <= start or len(els) < 50:
             break
         start = last + 1
-    DIAG["eventi_registro"] = kinds
+    # solo i conteggi dei post: il file è pubblico, niente messaggi, inviti o "mi piace"
+    DIAG["eventi_registro"] = {k: v for k, v in kinds.items() if k.split(":")[0].lower() in POST_RESOURCES}
     return rows
 
 

@@ -25,6 +25,25 @@ import anonimizza  # nomi da non pubblicare mai: vale per ogni articolo, anche p
 posts = sorted((anonimizza.post(p) for p in json.load(open(ROOT / "posts.json", encoding="utf-8"))),
                key=lambda p: p["data"], reverse=True)
 
+
+def estratto_pieno(p):
+    """Se l'estratto è troppo corto (es. "I numeri:"), lo allunga con i paragrafi seguenti: serve a Google e alle anteprime."""
+    e = p["estratto"]
+    if len(e) >= 60:
+        return p
+    parts = []
+    for t in p["testo"]:
+        t = re.sub(r"https?://\S+", "", t.replace("**", "")).strip()
+        if t: parts.append(t)
+        if len(" ".join(parts)) >= 150: break
+    txt = " ".join(parts)
+    if len(txt) > 190:
+        txt = txt[:190].rsplit(" ", 1)[0].rstrip(",;:") + "…"
+    return {**p, "estratto": txt or e}
+
+
+posts = [estratto_pieno(p) for p in posts]
+
 esc = lambda s: html.escape(str(s), quote=True)
 def fmt(d):
     y, m, g = d.split("-"); return f"{int(g)} {MS[int(m)-1]} {y}"

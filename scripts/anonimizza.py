@@ -1,6 +1,6 @@
 """Nomi da non pubblicare mai sul sito: ogni articolo, anche quelli nuovi da LinkedIn, passa da qui.
 
-Nomi tolti: Calenda, Enel, A2A, Edison, GSE, GME (anche per esteso).
+Nomi tolti: Calenda, persone private taggate (Nunzia Caponio), Enel, A2A, Edison, GSE, GME (anche per esteso).
 Per aggiungere un nome: una riga in REGOLE, dalla forma più specifica alla più generica.
 Le sostituzioni valgono per titolo, estratto, testo e hashtag; il link dell'articolo nasce dal titolo già ripulito.
 """
@@ -16,6 +16,11 @@ REGOLE = [
     (r"\b(?:al\s+senatore|a)\s+(?:Carlo\s+)?Calenda\b", "a un parlamentare"),
     (r"\b(?:di|del\s+senatore)\s+(?:Carlo\s+)?Calenda\b", "di un parlamentare"),
     (r"\b(?:il\s+senatore\s+)?(?:Carlo\s+)?Calenda\b", PERSONA),
+    # persone private citate o taggate nei post
+    (r"\ba\s+@?Nunzia Caponio\b", "alla collega"),
+    (r"\s+@?Nunzia Caponio\b", ""),
+    # tag di LinkedIn: sul sito resta il nome, senza la chiocciola
+    (r"(?<![\w.])@(?=[A-ZÀ-Ý])", ""),
     # aziende
     (r"\bEDF\s*/\s*Edison\b", "EDF"),
     (r"\b(?:a|ad)\s+(?:Enel|A2A|Edison)\b", "a " + AZIENDA),

@@ -130,25 +130,6 @@ PERSON = {"@type": "Person", "name": NAME, "jobTitle": "Chief Financial Officer"
           "url": SITE + "/", "sameAs": [LINKEDIN],
           "knowsAbout": ["Mercato dell'energia", "Bollette luce e gas", "Finanza aziendale", "Leadership"]}
 
-EC_URL = "https://www.energiacomune.com/contatti/?utm_source=domenicofraccalvieri.it&utm_medium=referral&utm_campaign=blog"
-
-
-def ec_box(where="articolo"):
-    """Richiamo alla pagina di contatto di Energia Comune, con trasparenza sul ruolo dell'autore."""
-    lead = {
-        "articolo": "Hai una bolletta di luce o gas da capire, o vuoi sapere se puoi spendere meno?",
-        "home": "Luce e gas per famiglie e imprese, con una persona vera che ti segue.",
-        "chi-sono": "Vuoi parlare con Energia Comune?",
-    }[where]
-    return f"""<aside class="ec" aria-label="Energia Comune">
-      <p class="label">Energia Comune · luce e gas</p>
-      <p class="ec-lead">{lead}</p>
-      <p class="ec-text">Lascia nome e recapito: un EnergyTeller di Energia Comune ti richiama, senza impegno, e ti aiuta a leggere i numeri e a scegliere.</p>
-      <a class="btn ec-btn" href="{EC_URL}" target="_blank" rel="noopener">Richiedi informazioni ↗</a>
-      <p class="ec-note">Sono il CFO di Energia Comune: questo è l'unico spazio promozionale del sito.</p>
-    </aside>"""
-
-
 ABOUT_BODY = f"""
       <p>Sono Domenico Fraccalvieri, Chief Financial Officer di Ecom S.p.A. (Energia Comune), azienda che vende luce e gas. Lavoro in Puglia.</p>
       <p>In Energia Comune sono entrato nel 2020 dal back office. Da lì sono passato per il customer care, la formazione, la selezione del personale e la fatturazione, fino al ruolo di CFO nel dicembre 2023. Prima avevo co-fondato una piccola impresa.</p>
@@ -166,7 +147,6 @@ def about_section(h="h2"):
     return f"""<section class="about" id="chi-sono">
     <div><{h}>Chi sono</{h}><blockquote>{QUOTE}</blockquote></div>
     <div class="body">{ABOUT_BODY}
-      {ec_box("chi-sono") if h == "h1" else ""}
     </div>
   </section>"""
 
@@ -210,7 +190,6 @@ def build():
 {body_html(p['testo'])}
     </div>
     {f'<div class="hashtags">{tags}</div>' if tags else ''}
-    {ec_box() if p['area'] == 'Energia' else ''}
     <div class="origin"><span>Pubblicato su LinkedIn il {fmt(p['data'])}</span>{fonte}<a href="{esc(p['linkedin'])}" target="_blank" rel="noopener">Post originale ↗</a></div>
     <nav class="pager" aria-label="Altri articoli">{pager}</nav>
   </article>"""
@@ -248,7 +227,6 @@ def build():
     <div class="head"><p class="label">In evidenza · Energia</p><button type="button" id="all-energy">Tutti gli articoli sull'energia →</button></div>
     <div class="cards">{cards}</div>
   </section>
-  {ec_box("home")}
   <div class="tools" id="archivio">
     <div class="topics" role="group" aria-label="Filtra per area">{filters}</div>
     <label class="search"><input id="q" type="search" placeholder="Cerca: PUN, BCE, leadership…" aria-label="Cerca negli articoli"></label>
@@ -274,7 +252,7 @@ def build():
     d = OUT / "chi-sono"; d.mkdir()
     (d / "index.html").write_text(page(f"Chi sono · {NAME}",
         "Domenico Fraccalvieri: dal customer care alla direzione finanziaria di Ecom S.p.A. – Energia Comune. Percorso, competenze e interventi.",
-        "/chi-sono/", upcoming((ROOT / "assets" / "chi-sono.html").read_text(encoding="utf-8").replace("{EC_BOX}", ec_box("chi-sono"))), jsonld({"@context": "https://schema.org", "@type": "ProfilePage", "mainEntity": PERSON}), depth=1), encoding="utf-8")
+        "/chi-sono/", upcoming((ROOT / "assets" / "chi-sono.html").read_text(encoding="utf-8").replace("{EC_BOX}", "")), jsonld({"@context": "https://schema.org", "@type": "ProfilePage", "mainEntity": PERSON}), depth=1), encoding="utf-8")
 
     # 404
     (OUT / "404.html").write_text(page(f"Pagina non trovata · {NAME}", "Pagina non trovata.", "/404.html",

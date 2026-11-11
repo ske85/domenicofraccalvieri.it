@@ -7,7 +7,7 @@
 - Formazione: laurea in Ingegneria gestionale al Politecnico di Bari; certificazione Utility Manager UNI 11782:2020.
 - Profilo LinkedIn: https://www.linkedin.com/in/domenico-fraccalvieri/
 - Questo sito riguarda solo il Domenico Fraccalvieri CFO in Puglia: non ha legami con professionisti omonimi di altri settori o Paesi.
-- Articoli pubblicati: 242 (Energia: 36, Finanza: 87, Valori: 53, Attualità: 66), aggiornati ogni giorno.
+- Articoli pubblicati: 244 (Energia: 36, Finanza: 88, Valori: 53, Attualità: 67), aggiornati ogni giorno.
 
 ## Pagine principali
 
@@ -32,6 +32,7 @@
 
 ## Articoli recenti · Finanza
 
+- [Geox, primi nove mesi 2026: meno ricavi, bilancio più solido.](https://domenicofraccalvieri.it/articoli/geox-primi-nove-mesi-2026-meno-ricavi-bilancio-piu-solido/): 📉 Ricavi a 435 milioni di euro, in calo dell'11,7% rispetto al 2025 (-9,4% a perimetro omogeneo).
 - [Leggo dell'offerta di Crédit Agricole su Banco BPM e penso: siamo ancora qui a discutere di risiko bancario tra Stati.](https://domenicofraccalvieri.it/articoli/leggo-dell-offerta-di-credit-agricole-su-banco-bpm-e-penso/): Golden power, terzi poli, difesa dell'italianità (o della francesità, o della germanicità). Ogni governo prova a spostare qualche pedina sulla propria scacchiera nazionale. Intanto la…
 - [Oggi all'Eurogruppo i dati erano chiari.](https://domenicofraccalvieri.it/articoli/oggi-all-eurogruppo-i-dati-erano-chiari/): Deficit ancora alti, debito in crescita nei Paesi più indebitati, spread che si allargano. E una spesa Ue per la difesa che passa dall'1,2% del PIL nel 2021 al 2% previsto nel 2027.
 - [9,4 miliardi di utile. Ma dove finiscono?](https://domenicofraccalvieri.it/articoli/9-4-miliardi-di-utile-ma-dove-finiscono/): La Big italiana bancaria archivia i primi nove mesi del 2026 con un utile netto record di 9,4 miliardi, in aumento del 7,3%. Un risultato importante. La domanda che mi faccio, da chi guarda…
@@ -43,7 +44,6 @@
 - [Manovra 2027: cosa cambia davvero per lavoratori, giovani e partite IVA 📊](https://domenicofraccalvieri.it/articoli/manovra-2027-cosa-cambia-davvero-per-lavoratori-giovani-e/): Il Disegno di Legge di Bilancio 2027 è stato bollinato dalla Ragioneria ed è arrivato in Parlamento. Ecco le misure da tenere d’occhio:
 - [Partite IVA, "sale lo sconto fiscale sulle auto degli agenti di commercio".](https://domenicofraccalvieri.it/articoli/partite-iva-sale-lo-sconto-fiscale-sulle-auto-degli-agenti/): Un titolo che fa piacere leggere. Poi si fanno i conti. Il tetto era fermo a 25.822 euro dal 1997 (in realtà sono i 50 milioni di lire del 1986). Ci sono voluti quasi 30 anni per toccarlo.…
 - [Quanto costa all'Italia un fisco che frena la crescita? Ho svolto un esercizio puramente teorico.](https://domenicofraccalvieri.it/articoli/quanto-costa-all-italia-un-fisco-che-frena-la-crescita-ho/): Tutte le cifre che seguono sono mie stime, costruite su dati ufficiali (Istat, Eurostat, MEF, INPS). Le ipotesi sono dichiarate perché chiunque possa verificarle.
-- [100 euro l’anno a ogni neonato: buona idea o goccia nel mare? 👶💶](https://domenicofraccalvieri.it/articoli/100-euro-lanno-a-ogni-neonato-buona-idea-o-goccia-nel-mare/): Ieri il CdM ha approvato la Manovra 2027. Tra le misure c’è un “salvadanaio previdenziale”: per ogni bambino nato dal 2027 l’INPS apre una posizione individuale, e lo Stato ci versa 100…
 
 ## Articoli recenti · Valori
 
@@ -62,6 +62,7 @@
 
 ## Articoli recenti · Attualità
 
+- [New York: 10 mesi, il minimo storico di omicidi.](https://domenicofraccalvieri.it/articoli/new-york-10-mesi-il-minimo-storico-di-omicidi/): Un anno fa le previsioni su New York erano catastrofiche: "disastro economico e sociale", "zero possibilità di sopravvivenza".
 - [Nel 2026 il problema non è trovare gli asset. È riconoscerli quando ce li abbiamo davanti.](https://domenicofraccalvieri.it/articoli/nel-2026-il-problema-non-e-trovare-gli-asset-e-riconoscerli/): Un cittadino kazako, accusato dagli USA di attacchi ransomware contro ospedali, è in Italia dal luglio 2025. Chiede di non essere estradato e offre in cambio tutto ciò che sa: come sono…
 - [Siamo circa il 7% di tutti gli esseri umani mai nati.](https://domenicofraccalvieri.it/articoli/siamo-circa-il-7-di-tutti-gli-esseri-umani-mai-nati/): Sembra poco. Invece è la quota più alta da decine di migliaia di anni.
 - [Midterm: per la stabilità globale è uno scenario migliore o peggiore?](https://domenicofraccalvieri.it/articoli/midterm-per-la-stabilita-globale-e-uno-scenario-migliore-o/): Stamattina il quadro è chiaro solo a metà. I Democratici hanno conquistato sia la Camera sia il Senato. Lo spoglio non è ancora chiuso, ma il controllo del Congresso è deciso.
@@ -73,4 +74,3 @@
 - ["L'Europa ha dimenticato come si cresce."](https://domenicofraccalvieri.it/articoli/l-europa-ha-dimenticato-come-si-cresce/): John Cochrane, economista della Hoover Institution noto come "The Grumpy Economist", lo ha detto senza giri di parole al Festival Internazionale dell'Economia. Difficile dargli torto.
 - [Il mondo al contrario.](https://domenicofraccalvieri.it/articoli/il-mondo-al-contrario/): A Torino la Procura ha chiuso le indagini sul caso cooperative: 21 indagati, un presunto giro di fatture false da oltre 100 milioni di euro.
 - [Oggi a pranzo si parlava di intelligenza artificiale.](https://domenicofraccalvieri.it/articoli/oggi-a-pranzo-si-parlava-di-intelligenza-artificiale/): Oggi a pranzo si parlava di intelligenza artificiale. Da una parte chi diceva che è un bene, dall'altra chi la vedeva come un male.
-- [L'Italia è prima in Europa per soldi persi al gioco: 355 € a testa nel 2023, contro una media UE di 216 €.](https://domenicofraccalvieri.it/articoli/l-italia-e-prima-in-europa-per-soldi-persi-al-gioco-355-a/): Viene spontaneo chiedersi se sia un fallimento dello Stato. Secondo me la risposta è più scomoda: lo Stato non è assente, è socio.

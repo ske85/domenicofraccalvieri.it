@@ -115,6 +115,14 @@ article.post{max-width:68ch; margin-inline:auto; padding-block:36px 64px}
   font-family:var(--f-mono); font-size:.82rem; color:var(--muted); display:flex; flex-wrap:wrap; gap:8px 18px; align-items:center}
 .origin a{color:var(--accent)}
 .origin span{margin-right:auto}
+/* Leggi anche: tre articoli vicini per tema */
+.related{margin-top:40px; padding-top:18px; border-top:2px solid var(--ink)}
+.related h2{margin:0 0 6px; font-family:var(--f-mono); font-size:.78rem; font-weight:500; letter-spacing:.08em; text-transform:uppercase; color:var(--muted)}
+.related ul{list-style:none; margin:0; padding:0; display:grid}
+.related li + li{border-top:1px solid var(--rule)}
+.related a{display:grid; gap:4px; padding:12px 0; text-decoration:none; font-family:var(--f-display); font-weight:700; font-size:1.05rem; line-height:1.3}
+.related a:hover{color:var(--accent)}
+.related .tag{justify-self:start}
 .pager{display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:16px; margin-top:36px}
 .pager a{display:grid; gap:4px; padding:14px 0; border-top:1px solid var(--rule); text-decoration:none; font-family:var(--f-display); font-weight:700; line-height:1.25}
 .pager a:hover{color:var(--accent)}

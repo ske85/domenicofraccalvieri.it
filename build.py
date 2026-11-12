@@ -158,6 +158,39 @@ def upcoming(html_text):
                   lambda m: '<em class="soon">In programma</em> · ' if m.group(1) >= today else "", html_text)
 
 
+SEO = {k: v for k, v in json.load(open(ROOT / "seo.json", encoding="utf-8")).items() if not k.startswith("_")} \
+    if (ROOT / "seo.json").exists() else {}
+
+STOP = set("""a ad al alla alle anche ancora che chi ci come con cosa da dal dalla dei del della delle di e ed gli ha hanno ho i il in
+io la le lo loro ma mai mi ne nei nel nella noi non o per perché più può quando quanto questo questa se si sia sono su sul
+sulla tra tutti tutto un una uno è era essere fa fare già oggi solo sempre poi molto ogni quello quella dove anni anno
+the and of to""".split())
+
+
+def _parole(t):
+    return {w[:7] for w in re.findall(r"[a-zàèéìòù0-9]{4,}", t.lower()) if w not in STOP}
+
+
+def correlati(posts, n=3):
+    """Per ogni articolo, i 3 più vicini per hashtag e parole del titolo e dell'apertura (stessa area favorita)."""
+    info = []
+    for p in posts:
+        info.append((set(h.lower() for h in p["hashtag"]), _parole(p["titolo"]), _parole(" ".join(p["testo"][:4]))))
+    out = {}
+    for i, p in enumerate(posts):
+        tags, tit, body = info[i]
+        scored = []
+        for j, q in enumerate(posts):
+            if i == j: continue
+            t2, ti2, b2 = info[j]
+            s = 3 * len(tags & t2) + 4 * len(tit & ti2) + 1.5 * len(tit & b2) + 1.5 * len(body & ti2) + 0.5 * len(body & b2)
+            if q["area"] == p["area"]: s += 2
+            scored.append((s, q["data"], j))
+        scored.sort(reverse=True)
+        out[p["slug"]] = [posts[j] for s, d, j in scored[:n] if s > 2]
+    return out
+
+
 def build():
     if OUT.exists(): shutil.rmtree(OUT)
     (OUT / "assets").mkdir(parents=True)
@@ -175,7 +208,11 @@ def build():
     (OUT / "robots.txt").write_text(f"User-agent: *\nAllow: /\n\nSitemap: {SITE}/sitemap.xml\n")
 
     # articoli
+    rel = correlati(posts)
     for i, p in enumerate(posts):
+        seo = SEO.get(p["slug"], {})
+        desc = seo.get("descrizione") or p["estratto"]
+        related = "".join(f'<li><a href="../{q["slug"]}/"><span class="tag">{q["area"]}</span>{inline(q["titolo"])}</a></li>' for q in rel.get(p["slug"], []))
         newer = posts[i-1] if i > 0 else None
         older = posts[i+1] if i + 1 < len(posts) else None
         tags = "".join(f"<span>#{esc(t)}</span>" for t in p["hashtag"])
@@ -191,15 +228,16 @@ def build():
     </div>
     {f'<div class="hashtags">{tags}</div>' if tags else ''}
     <div class="origin"><span>Pubblicato su LinkedIn il {fmt(p['data'])}</span>{fonte}<a href="{esc(p['linkedin'])}" target="_blank" rel="noopener">Post originale ↗</a></div>
+    {f'<section class="related" aria-labelledby="rel-h"><h2 id="rel-h">Leggi anche</h2><ul>{related}</ul></section>' if related else ''}
     <nav class="pager" aria-label="Altri articoli">{pager}</nav>
   </article>"""
         ld = jsonld({"@context": "https://schema.org", "@type": "BlogPosting", "headline": plain(p["titolo"])[:110],
-                     "description": p["estratto"], "datePublished": p["data"], "inLanguage": "it-IT",
+                     "description": desc, "datePublished": p["data"], "inLanguage": "it-IT",
                      "articleSection": p["area"], "keywords": p["hashtag"], "author": PERSON,
                      "copyrightHolder": {"@type": "Person", "name": NAME}, "copyrightYear": int(p["data"][:4]),
                      "mainEntityOfPage": f"{SITE}/articoli/{p['slug']}/"})
         d = OUT / "articoli" / p["slug"]; d.mkdir(parents=True)
-        (d / "index.html").write_text(page(f"{plain(p['titolo'])} · {NAME}", p["estratto"], f"/articoli/{p['slug']}/", main,
+        (d / "index.html").write_text(page(f"{seo.get('titolo') or plain(p['titolo'])} · {NAME}", desc, f"/articoli/{p['slug']}/", main,
                                            ld + '\n<meta property="og:type" content="article">', depth=2), encoding="utf-8")
 
     # home

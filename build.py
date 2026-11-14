@@ -77,6 +77,12 @@ def body_html(paras):
     flush()
     return "\n".join(out)
 
+def ver(name):
+    """Impronta del file: cambia l'indirizzo quando cambia il contenuto, così i browser non mostrano la versione vecchia."""
+    import hashlib
+    return hashlib.sha1((ROOT / "assets" / name).read_bytes()).hexdigest()[:8]
+
+
 def page(title, desc, path, main, extra_head="", depth=0):
     rel = "../" * depth
     canonical = SITE + path
@@ -96,8 +102,8 @@ def page(title, desc, path, main, extra_head="", depth=0):
 <link rel="icon" href="{rel}favicon.svg" type="image/svg+xml">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self' data:; connect-src 'none'; object-src 'none'; base-uri 'self'; form-action 'none'">
 <meta name="referrer" content="strict-origin-when-cross-origin">
-<link rel="stylesheet" href="{rel}assets/style.css">
-<script src="{rel}assets/ora.js" defer></script>
+<link rel="stylesheet" href="{rel}assets/style.css?v={ver('style.css')}">
+<script src="{rel}assets/ora.js?v={ver('ora.js')}" defer></script>
 {extra_head}
 </head>
 <body>
@@ -289,7 +295,7 @@ def build():
     ld = jsonld({"@context": "https://schema.org", "@type": "WebSite", "name": NAME, "url": SITE + "/", "inLanguage": "it-IT", "author": PERSON})
     (OUT / "index.html").write_text(page(f"{NAME} · Energia, finanza e valori",
         "Domenico Fraccalvieri, CFO di Energia Comune, scrive di mercato dell'energia, bollette, finanza d'impresa e leadership.",
-        "/", main, ld + '\n<meta property="og:type" content="website">\n<script src="assets/site.js" defer></script>'), encoding="utf-8")
+        "/", main, ld + '\n<meta property="og:type" content="website">\n<script src="assets/site.js?v=' + ver("site.js") + '" defer></script>'), encoding="utf-8")
 
     # chi sono
     d = OUT / "chi-sono"; d.mkdir()

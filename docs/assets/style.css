@@ -369,3 +369,10 @@ footer.site{font-size:.84rem}
 .row{grid-template-columns:6.6rem minmax(0,1fr)}
 .row > .date{white-space:nowrap}
 @media (max-width:640px){ .row{grid-template-columns:minmax(0,1fr)} }
+
+/* Data e ora in testata, accanto al nome */
+header.site{justify-content:flex-start; gap:8px 18px}
+header.site nav.main{margin-left:auto}
+.now{font-family:var(--f-mono); font-size:.84rem; font-weight:500; color:var(--muted); padding-left:18px; border-left:1px solid var(--rule); font-variant-numeric:tabular-nums}
+.now::first-letter{text-transform:uppercase}
+@media (max-width:760px){ .now{order:2; flex-basis:100%; padding-left:0; border-left:0} header.site nav.main{order:3; margin-left:-12px} }

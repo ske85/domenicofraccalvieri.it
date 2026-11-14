@@ -97,12 +97,14 @@ def page(title, desc, path, main, extra_head="", depth=0):
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self' data:; connect-src 'none'; object-src 'none'; base-uri 'self'; form-action 'none'">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <link rel="stylesheet" href="{rel}assets/style.css">
+<script src="{rel}assets/ora.js" defer></script>
 {extra_head}
 </head>
 <body>
 <div class="wrap">
   <header class="site">
     <a class="mark" href="{rel or './'}">{NAME}<span>.</span></a>
+    <time class="now" id="adesso" hidden></time>
     <nav class="main" aria-label="Sezioni">
       <a href="{rel or './'}#archivio">Articoli</a>
       <a href="{rel}chi-sono/">Chi sono</a>
@@ -196,6 +198,7 @@ def build():
     (OUT / "assets").mkdir(parents=True)
     shutil.copy(ROOT / "assets" / "style.css", OUT / "assets" / "style.css")
     shutil.copy(ROOT / "assets" / "site.js", OUT / "assets" / "site.js")
+    shutil.copy(ROOT / "assets" / "ora.js", OUT / "assets" / "ora.js")
     shutil.copy(ROOT / "assets" / "favicon.svg", OUT / "favicon.svg")
     shutil.copy(ROOT / "assets" / "ritratto.jpg", OUT / "assets" / "ritratto.jpg")
     shutil.copy(ROOT / "assets" / "qr-linkedin.svg", OUT / "assets" / "qr-linkedin.svg")

@@ -276,3 +276,65 @@ footer.site .privacy, footer.site .rights{flex-basis:100%}
 .gallery{display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:10px; margin:6px 0 0; padding:0; list-style:none}
 .gallery img{width:100%; height:auto; aspect-ratio:4/5; object-fit:cover; border-radius:6px; display:block}
 @media (max-width:520px){ .gallery{grid-template-columns:repeat(2,minmax(0,1fr))} .gallery li:last-child{display:none} }
+
+/* ===== Veste "giornale": carta calda con grana, filetti da testata, angoli morbidi ===== */
+:root{
+  --bg:#F3EDE0; --surface:#FBF8F1; --ink:#1D1A16; --muted:#5E574B; --rule:#D8CFBD;
+  --accent:#9A5600; --accent-soft:#F1DFBC; --a-energia:#9A5600;
+  --paper:url("carta.png");
+  --r-s:12px; --r-m:18px; --r-l:24px;
+  --shadow:0 1px 0 rgba(60,45,20,.05), 0 8px 22px -14px rgba(60,45,20,.35);
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){
+  --bg:#171411; --surface:#211D18; --ink:#EDE6D8; --muted:#A69E8F; --rule:#3A342B;
+  --accent:#F0AE3C; --accent-soft:#3B2D13; --a-energia:#F0AE3C;
+  --paper:url("carta-scura.png"); --shadow:0 10px 24px -16px rgba(0,0,0,.8) } }
+:root[data-theme="dark"]{
+  --bg:#171411; --surface:#211D18; --ink:#EDE6D8; --muted:#A69E8F; --rule:#3A342B;
+  --accent:#F0AE3C; --accent-soft:#3B2D13; --a-energia:#F0AE3C;
+  --paper:url("carta-scura.png"); --shadow:0 10px 24px -16px rgba(0,0,0,.8) }
+body{background:var(--bg) var(--paper) repeat; background-size:160px 160px}
+
+/* Testata: doppio filetto come sotto il nome di un quotidiano */
+header.site{border-bottom:3px double var(--ink); padding-block:20px 16px}
+.mark{font-size:1.2rem; font-weight:800}
+nav.main a{padding:6px 12px; border:0; border-radius:999px}
+nav.main a:hover{background:var(--accent-soft); color:var(--ink)}
+nav.main a[aria-current="page"]{background:var(--ink); color:var(--bg)}
+nav.main{gap:6px}
+.hero{border-bottom:3px double var(--rule)}
+.label, .month{letter-spacing:.1em}
+
+/* Angoli morbidi ovunque */
+a:focus-visible, button:focus-visible, input:focus-visible{border-radius:8px}
+.card{border-radius:var(--r-l); padding:22px; box-shadow:var(--shadow); transition:transform .15s, border-color .15s}
+.card:hover{transform:translateY(-2px)}
+.search input{border-radius:999px; padding:10px 16px}
+.btn, .more button{border-radius:999px; padding:11px 20px}
+.topics button{padding:7px 14px}
+.origin{border-radius:var(--r-m); box-shadow:var(--shadow)}
+.facts, .areas{border-radius:var(--r-m); box-shadow:var(--shadow)}
+.steps li{border-radius:var(--r-m)}
+.results div{border-radius:var(--r-m); border-top:1px solid var(--rule); box-shadow:var(--shadow)}
+.results div .n{display:inline-block}
+.event-hl{border-radius:var(--r-l); border-top:1px solid var(--rule); box-shadow:var(--shadow); padding:24px}
+.gallery img{border-radius:var(--r-s)}
+.side img{border-radius:var(--r-l)}
+.qr{border-radius:var(--r-m)}
+.hashtags span{padding:3px 10px; border:1px solid var(--rule); border-radius:999px; background:var(--surface)}
+.hashtags{gap:6px 8px}
+
+/* Elenco articoli: riga che si illumina con angoli tondi al passaggio */
+.row{padding:20px 14px; margin-inline:-14px; border-radius:var(--r-m); transition:background .15s}
+.row:hover{background:var(--surface)}
+.related a, .pager a{border-radius:var(--r-s)}
+.related a{padding:12px 12px; margin-inline:-12px}
+.related a:hover{background:var(--surface)}
+.pager a{padding:14px 16px; border:1px solid var(--rule); background:var(--surface)}
+.related{border-top:3px double var(--ink)}
+
+/* Articolo: capolettera da giornale sul primo paragrafo */
+.post .body > p:first-child::first-letter{font-family:var(--f-display); font-weight:800; font-size:2.7em; line-height:.8; float:left; padding:.1em .1em 0 0; color:var(--accent)}
+.about blockquote, .side blockquote{border-left-width:3px; border-radius:2px}
+footer.site{border-top:3px double var(--rule)}
+@media (max-width:640px){ .row{padding:18px 12px; margin-inline:-12px} }

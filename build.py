@@ -121,8 +121,8 @@ def page(title, desc, path, main, extra_head="", depth=0):
   </main>
   <footer class="site">
     <span>© {posts[0]["data"][:4]} {NAME} · Tutti i diritti riservati</span>
-    <a href="{LINKEDIN}" target="_blank" rel="noopener">LinkedIn ↗</a>
-    <span class="rights">Testi e immagini non possono essere copiati o ripubblicati senza autorizzazione. Puoi citarne brevi estratti indicando l'autore e il link all'articolo.</span>
+    <span class="flinks"><a href="{rel}note-legali/">Note legali e privacy</a> · <a href="{LINKEDIN}" target="_blank" rel="noopener">LinkedIn ↗</a></span>
+    <span class="rights">Opinioni personali, non riconducibili ad aziende o enti. I contenuti non sono consulenza finanziaria, fiscale o legale. Testi e immagini non possono essere copiati o ripubblicati senza autorizzazione: puoi citarne brevi estratti indicando l'autore e il link all'articolo.</span>
     <span class="privacy">Questo sito non usa cookie, non raccoglie dati e non traccia i visitatori.</span>
   </footer>
 </div>
@@ -303,12 +303,18 @@ def build():
         "Domenico Fraccalvieri: dal customer care alla direzione finanziaria di Ecom S.p.A. – Energia Comune. Percorso, competenze e interventi.",
         "/chi-sono/", upcoming((ROOT / "assets" / "chi-sono.html").read_text(encoding="utf-8").replace("{EC_BOX}", "")), jsonld({"@context": "https://schema.org", "@type": "ProfilePage", "mainEntity": PERSON}), depth=1), encoding="utf-8")
 
+    # note legali e privacy
+    d = OUT / "note-legali"; d.mkdir()
+    (d / "index.html").write_text(page(f"Note legali e privacy · {NAME}",
+        "Note legali, diritto d'autore e privacy del sito personale di Domenico Fraccalvieri: niente cookie, niente tracciamenti, opinioni personali.",
+        "/note-legali/", (ROOT / "assets" / "note-legali.html").read_text(encoding="utf-8").replace("{AGGIORNATO}", "14 novembre 2026"), depth=1), encoding="utf-8")
+
     # 404
     (OUT / "404.html").write_text(page(f"Pagina non trovata · {NAME}", "Pagina non trovata.", "/404.html",
         '<section class="hero"><h1>Pagina non trovata.</h1><p>Il link potrebbe essere cambiato. <a href="/">Torna agli articoli</a>.</p></section>'), encoding="utf-8")
 
     # sitemap
-    urls = [(SITE + "/", posts[0]["data"]), (SITE + "/chi-sono/", posts[0]["data"])] + \
+    urls = [(SITE + "/", posts[0]["data"]), (SITE + "/chi-sono/", posts[0]["data"]), (SITE + "/note-legali/", "2026-11-14")] + \
            [(f"{SITE}/articoli/{p['slug']}/", p["data"]) for p in posts]
     (OUT / "sitemap.xml").write_text('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' +
         "".join(f"  <url><loc>{u}</loc><lastmod>{d}</lastmod></url>\n" for u, d in urls) + "</urlset>\n")

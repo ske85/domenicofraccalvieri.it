@@ -376,3 +376,37 @@ header.site nav.main{margin-left:auto}
 .now{font-family:var(--f-mono); font-size:.84rem; font-weight:500; color:var(--muted); padding-left:18px; border-left:1px solid var(--rule); font-variant-numeric:tabular-nums}
 .now::first-letter{text-transform:uppercase}
 @media (max-width:760px){ .now{order:2; flex-basis:100%; padding-left:0; border-left:0} header.site nav.main{order:3; margin-left:-12px} }
+
+/* ===== Carta diversa per ogni area, come le pagine colorate dei quotidiani =====
+   Energia: avorio caldo · Finanza: rosa salmone dei giornali economici · Valori: grigio lavanda · Attualità: carta da quotidiano */
+:root{
+  --p-en-bg:#F3EBC9; --p-en-sf:#FBF7E6;
+  --p-fi-bg:#F6DACB; --p-fi-sf:#FDF1EA;
+  --p-va-bg:#ECE7F0; --p-va-sf:#F8F5FA;
+  --p-at-bg:#E7EAE2; --p-at-sf:#F6F7F2;
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){
+  --p-en-bg:#1B1610; --p-en-sf:#251F17;
+  --p-fi-bg:#1C1513; --p-fi-sf:#271D1A;
+  --p-va-bg:#17151C; --p-va-sf:#211E28;
+  --p-at-bg:#141814; --p-at-sf:#1D221D } }
+:root[data-theme="dark"]{
+  --p-en-bg:#1B1610; --p-en-sf:#251F17;
+  --p-fi-bg:#1C1513; --p-fi-sf:#271D1A;
+  --p-va-bg:#17151C; --p-va-sf:#211E28;
+  --p-at-bg:#141814; --p-at-sf:#1D221D }
+body{transition:background-color .35s}
+body[data-paper="Energia"], body:has(article.post[data-area="Energia"]){--bg:var(--p-en-bg); --surface:var(--p-en-sf); --c:var(--a-energia)}
+body[data-paper="Finanza"], body:has(article.post[data-area="Finanza"]){--bg:var(--p-fi-bg); --surface:var(--p-fi-sf); --c:var(--a-finanza)}
+body[data-paper="Valori"], body:has(article.post[data-area="Valori"]){--bg:var(--p-va-bg); --surface:var(--p-va-sf); --c:var(--a-valori)}
+body[data-paper="Attualità"], body:has(article.post[data-area="Attualità"]){--bg:var(--p-at-bg); --surface:var(--p-at-sf); --c:var(--a-attualita)}
+/* la testata prende il colore dell'area: doppio filetto e capolettera */
+body[data-paper] header.site, body:has(article.post) header.site{border-bottom-color:var(--c, var(--ink))}
+.post .body > p:first-child::first-letter{color:var(--c, var(--accent))}
+.post .body li::before{background:var(--c, var(--accent))}
+.post .body a, .origin a{color:var(--c, var(--accent))}
+/* Pagina note legali */
+.legal .body h2{font-family:var(--f-display); font-weight:800; font-size:1.3rem; letter-spacing:-.01em; margin:18px 0 0}
+.legal .body > p:first-child::first-letter{all:unset}
+.legal h1{margin-top:22px}
+.legal .updated{font-family:var(--f-mono); font-size:.82rem; color:var(--muted); margin-top:18px}

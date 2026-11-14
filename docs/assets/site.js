@@ -20,6 +20,8 @@
       m.hidden = !any; list.hidden = !any;
     });
     buttons.forEach(function (b) { b.setAttribute("aria-pressed", String(b.getAttribute("data-area") === area)); });
+    // il colore della carta segue l'area scelta
+    if (area === "Tutti") document.body.removeAttribute("data-paper"); else document.body.setAttribute("data-paper", area);
     empty.hidden = match > 0;
     var rest = match - shown;
     more.hidden = rest <= 0;

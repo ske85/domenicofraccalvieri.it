@@ -338,3 +338,34 @@ a:focus-visible, button:focus-visible, input:focus-visible{border-radius:8px}
 .about blockquote, .side blockquote{border-left-width:3px; border-radius:2px}
 footer.site{border-top:3px double var(--rule)}
 @media (max-width:640px){ .row{padding:18px 12px; margin-inline:-12px} }
+
+/* Caratteri un po' più grandi e più pieni */
+:root{--muted:#4E483E}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){--muted:#B8B0A1} }
+:root[data-theme="dark"]{--muted:#B8B0A1}
+body{font-size:1.16rem; line-height:1.62}
+.mark{font-size:1.3rem}
+nav.main{font-size:.88rem; font-weight:500}
+.label, .month, .tag, .date, .stats, .back, .hashtags, .origin, .related h2, .cs h2, .side .role, .steps .when, .talks .when, .prev .when, .facts .k, .small .k, .about dt, .topics2 dt, .src, .soon{font-weight:500}
+.label, .month{font-size:.8rem}
+.tag{font-size:.78rem}
+.date, .stats{font-size:.86rem}
+.topics button{font-size:.86rem; font-weight:500}
+.search input{font-size:.92rem}
+.btn, .more button{font-size:.92rem; font-weight:500}
+.hero p{font-size:1.3rem}
+.card h3{font-size:1.3rem; font-weight:800}
+.card p{font-size:1.02rem}
+.row h2{font-size:1.55rem; font-weight:800}
+.related a{font-size:1.14rem; font-weight:800}
+.pager a{font-weight:800}
+.post .body strong, .post .body b{font-weight:600}
+.cs .lead{font-size:1.28rem}
+.steps b{font-size:1.14rem; font-weight:800}
+.steps .note, .areas span, .results p, .talks span span, .prev span span{font-size:1rem}
+.areas b, .results b, .facts .v{font-weight:800}
+.small, .about dl, .before{font-size:1.02rem}
+footer.site{font-size:.84rem}
+.row{grid-template-columns:6.6rem minmax(0,1fr)}
+.row > .date{white-space:nowrap}
+@media (max-width:640px){ .row{grid-template-columns:minmax(0,1fr)} }

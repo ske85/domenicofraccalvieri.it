@@ -3,7 +3,12 @@ name: Aggiorna articoli da LinkedIn
 on:
   schedule:
     - cron: "17 5 * * *"   # ogni giorno alle 7:17 ora italiana (6:17 con l'ora solare)
-  workflow_dispatch: {}
+  workflow_dispatch:
+    inputs:
+      tutte:
+        description: "Segnala a Bing tutte le pagine (IndexNow), non solo le nuove"
+        type: boolean
+        default: false
   push:
     branches: [main]
     paths:
@@ -27,6 +32,9 @@ jobs:
         with:
           python-version: "3.12"
 
+      - name: Ricorda la sitemap di prima
+        run: cp docs/sitemap.xml "$RUNNER_TEMP/sitemap-prima.xml"
+
       - name: Scarica i post nuovi da LinkedIn
         env:
           LINKEDIN_TOKEN: ${{ secrets.LINKEDIN_TOKEN }}
@@ -46,3 +54,10 @@ jobs:
           git add -A
           git commit -m "Nuovi articoli da LinkedIn"
           git push
+
+      - name: Avvisa Bing delle pagine nuove (IndexNow)
+        if: always()
+        env:
+          TUTTE: ${{ github.event.inputs.tutte == 'true' && '1' || '0' }}
+          SITEMAP_PRIMA: ${{ runner.temp }}/sitemap-prima.xml
+        run: python scripts/indexnow.py || true

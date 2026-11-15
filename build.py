@@ -216,6 +216,8 @@ def build():
     (OUT / "CNAME").write_text("domenicofraccalvieri.it\n")
     (OUT / ".nojekyll").write_text("")
     shutil.copy(ROOT / "assets" / "BingSiteAuth.xml", OUT / "BingSiteAuth.xml")  # verifica Bing Webmaster Tools
+    key = (ROOT / "assets" / "indexnow-key.txt").read_text().strip()   # IndexNow: avvisa Bing quando escono pagine nuove
+    (OUT / f"{key}.txt").write_text(key)
     (OUT / "robots.txt").write_text(f"User-agent: *\nAllow: /\n\nSitemap: {SITE}/sitemap.xml\n")
 
     # articoli

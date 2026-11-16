@@ -207,7 +207,9 @@ def build():
     shutil.copy(ROOT / "assets" / "ora.js", OUT / "assets" / "ora.js")
     shutil.copy(ROOT / "assets" / "favicon.svg", OUT / "favicon.svg")
     shutil.copy(ROOT / "assets" / "ritratto.jpg", OUT / "assets" / "ritratto.jpg")
-    shutil.copy(ROOT / "assets" / "qr-linkedin.svg", OUT / "assets" / "qr-linkedin.svg")
+    shutil.copy(ROOT / "assets" / "qr-profilo-linkedin.svg", OUT / "assets" / "qr-profilo-linkedin.svg")
+    # Un QR stampato in giro punta a questo vecchio indirizzo: chi lo apre viene portato alla home del sito
+    shutil.copy(ROOT / "assets" / "qr-vai-al-sito.svg", OUT / "assets" / "qr-linkedin.svg")
     for f in ("carta.png", "carta-scura.png"):  # grana della carta per lo sfondo
         shutil.copy(ROOT / "assets" / f, OUT / "assets" / f)
     for i in (1, 2, 3):
@@ -292,7 +294,7 @@ def build():
     <div><p class="label">Chi sono</p>
       <p class="t">Dal customer care alla direzione finanziaria di Energia Comune.</p>
       <a class="more-link" href="chi-sono/">Leggi la mia storia →</a></div>
-    <div class="qr"><img src="assets/qr-linkedin.svg" alt="Codice QR del profilo LinkedIn di Domenico Fraccalvieri" width="96" height="96"><span>LinkedIn</span></div>
+    <div class="qr"><img src="assets/qr-profilo-linkedin.svg" alt="Codice QR del profilo LinkedIn di Domenico Fraccalvieri" width="96" height="96"><span>LinkedIn</span></div>
   </section>"""
     ld = jsonld({"@context": "https://schema.org", "@type": "WebSite", "name": NAME, "url": SITE + "/", "inLanguage": "it-IT", "author": PERSON})
     (OUT / "index.html").write_text(page(f"{NAME} · Energia, finanza e valori",

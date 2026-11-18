@@ -7,7 +7,7 @@
 - Formazione: laurea in Ingegneria gestionale al Politecnico di Bari; certificazione Utility Manager UNI 11782:2020.
 - Profilo LinkedIn: https://www.linkedin.com/in/domenico-fraccalvieri/
 - Questo sito riguarda solo il Domenico Fraccalvieri CFO in Puglia: non ha legami con professionisti omonimi di altri settori o Paesi.
-- Articoli pubblicati: 258 (Energia: 36, Finanza: 94, Valori: 53, Attualità: 75), aggiornati ogni giorno.
+- Articoli pubblicati: 263 (Energia: 38, Finanza: 96, Valori: 54, Attualità: 75), aggiornati ogni giorno.
 
 ## Pagine principali
 
@@ -17,6 +17,8 @@
 
 ## Articoli recenti · Energia
 
+- [Novembre, PUN e gas: quando ci abituiamo al peggio](https://domenicofraccalvieri.it/articoli/novembre-pun-e-gas-quando-ci-abituiamo-al-peggio/): A fine giugno il gas al PSV costava circa 0,46 €/Smc. Oggi siamo stabilmente tra 0,90 e 1,00 €/Smc, con un picco di 1,13 €/Smc a fine ottobre.
+- [Fotovoltaico sì o no? Prima delle opinioni, i numeri in Italia.](https://domenicofraccalvieri.it/articoli/fotovoltaico-si-o-no-prima-delle-opinioni-i-numeri-in-italia/): ☀️ Quanto ne abbiamo • 48,3 GW installati al 30 settembre 2026 (dati Terna/Italia Solare) • 44,3 TWh prodotti nel 2025: il 14,2% della domanda elettrica nazionale
 - [Quando chi governa non sa fare impresa.](https://domenicofraccalvieri.it/articoli/quando-chi-governa-non-sa-fare-impresa/): Oggi il Consiglio dei ministri ha approvato il decreto Bollette bis, dopo due rinvii. Il ministro annuncia: "Da gennaio una riduzione media di circa 15 euro al megawattora".
 - [Bollette del gas: a ottobre 2026 forse il prezzo più alto di sempre. Ma il motivo non è quello che pensiamo.](https://domenicofraccalvieri.it/articoli/bollette-del-gas-a-ottobre-2026-forse-il-prezzo-piu-alto-di/): In tv hanno mostrato un confronto molto chiaro (dati pubblicati dall'ente regolatore, centesimi per metro cubo):
 - [Due italiani, due visioni opposte del mondo. E 900.000 ettari di Patagonia in mezzo.](https://domenicofraccalvieri.it/articoli/due-italiani-due-visioni-opposte-del-mondo-e-900-000-ettari/): Dopo 35 anni, i Benetton lasciano l’Argentina. Edizione vende Compañía de Tierras Sud e Ganadera Cóndor (oltre 900 mila ettari, circa 280 mila pecore, quasi un milione di kg di lana l’anno)…
@@ -27,11 +29,11 @@
 - [Una scelta giusta, impostata male.](https://domenicofraccalvieri.it/articoli/una-scelta-giusta-impostata-male/): Stanotte i leader europei hanno chiesto alla Commissione di rivalutare l'impatto dell'ETS2, il nuovo mercato della CO2 su riscaldamento e carburanti. È un segnale importante, perché il…
 - [Si è chiusa martedì "It's All Energy & Utility" e voglio ringraziare Brainz Italy, e in particolare…](https://domenicofraccalvieri.it/articoli/si-e-chiusa-martedi-it-s-all-energy-utility-e-voglio/): Si è chiusa martedì "It's All Energy & Utility" e voglio ringraziare Brainz Italy, e in particolare Eleonora Pagliuso, per l'invito alla tavola rotonda "Finance e Sistemi di Pagamento per…
 - [Un parlamentare denuncia i grandi produttori di energia.](https://domenicofraccalvieri.it/articoli/un-parlamentare-denuncia-i-grandi-produttori-di-energia/): Ecco che diranno, ovvio gli altarini politici e non solo Giovedì, al question time in Senato, un parlamentare dell'opposizione ha annunciato denunce ad Antitrust e Procura: secondo lui i…
-- [Telemarketing luce e gas: una regola uguale per tutti, ma solo finché non disturba i grandi?](https://domenicofraccalvieri.it/articoli/telemarketing-luce-e-gas-una-regola-uguale-per-tutti-ma-solo/): Dal 19 giugno nessuno può proporre contratti di luce e gas al telefono senza il consenso esplicito del cliente. È una norma giusta e l'ho accolta con favore. Le piccole aziende energetiche…
-- ["650 euro l'anno di bolletta". Ma in quale Italia?](https://domenicofraccalvieri.it/articoli/650-euro-l-anno-di-bolletta-ma-in-quale-italia/): Ieri a SkyTG24 il presidente di ARERA ha detto che la spesa annua del "cliente tipo" è passata da 600 a 650 euro.
 
 ## Articoli recenti · Finanza
 
+- [Leggo che in manovra cambia di nuovo il bonus giovani: prima flat tax all'1% sugli aumenti, ora Irpef…](https://domenicofraccalvieri.it/articoli/leggo-che-in-manovra-cambia-di-nuovo-il-bonus-giovani-prima/): Leggo che in manovra cambia di nuovo il bonus giovani: prima flat tax all'1% sugli aumenti, ora Irpef dimezzata nel 2027 e ridotta del 30% nel 2028 per circa 334mila neoassunti under 30…
+- [Pago lo Stato. Perché devo pagare anche per pagarlo?](https://domenicofraccalvieri.it/articoli/pago-lo-stato-perche-devo-pagare-anche-per-pagarlo/): Quest’anno ho pagato circa 20 avvisi pagoPA: TARI, mensa, multe, ticket, bollo. Tra commissioni e costi di canale ho speso fra 30 e 50 euro in più. Nel 2026 mi sembra difficile da…
 - [Terra gratis ai giovani per 10 anni. Stavolta può essere la volta buona?](https://domenicofraccalvieri.it/articoli/terra-gratis-ai-giovani-per-10-anni-stavolta-puo-essere-la/): Con l'approvazione definitiva di ColtivaItalia (Senato, 4 novembre) arriva una misura concreta per gli under 41: ISMEA metterà a bando 8.417 ettari di terreni pubblici in comodato d'uso…
 - [La flat tax all'1% per i giovani costa davvero l'1%? Non sempre. 👇](https://domenicofraccalvieri.it/articoli/la-flat-tax-all-1-per-i-giovani-costa-davvero-l-1-non-sempre/): La Manovra 2027 (art. 44 del ddl di Bilancio) prevede un'imposta dell'1% sugli aumenti di stipendio, fino a 2.500 €, per i dipendenti privati under 30 con reddito fino a 28.000 €.
 - [Magia o monopolio? Chiamatelo come volete.](https://domenicofraccalvieri.it/articoli/magia-o-monopolio-chiamatelo-come-volete/): Guardate questi numeri: 📈 Ricavi: 3.114,6 mln (+8,1%) 📈 EBITDA: 2.172,0 mln (+7,2%) 📈 Utile netto: 857,2 mln (+0,5%) 📈 Investimenti: 2.353,1 mln (+12,7%)
@@ -42,11 +44,10 @@
 - [Leggo dell'offerta di Crédit Agricole su Banco BPM e penso: siamo ancora qui a discutere di risiko bancario tra Stati.](https://domenicofraccalvieri.it/articoli/leggo-dell-offerta-di-credit-agricole-su-banco-bpm-e-penso/): Golden power, terzi poli, difesa dell'italianità (o della francesità, o della germanicità). Ogni governo prova a spostare qualche pedina sulla propria scacchiera nazionale. Intanto la…
 - [Oggi all'Eurogruppo i dati erano chiari.](https://domenicofraccalvieri.it/articoli/oggi-all-eurogruppo-i-dati-erano-chiari/): Deficit ancora alti, debito in crescita nei Paesi più indebitati, spread che si allargano. E una spesa Ue per la difesa che passa dall'1,2% del PIL nel 2021 al 2% previsto nel 2027.
 - [9,4 miliardi di utile. Ma dove finiscono?](https://domenicofraccalvieri.it/articoli/9-4-miliardi-di-utile-ma-dove-finiscono/): La Big italiana bancaria archivia i primi nove mesi del 2026 con un utile netto record di 9,4 miliardi, in aumento del 7,3%. Un risultato importante. La domanda che mi faccio, da chi guarda…
-- [Uno Stato che si finanzia con la liquidità delle proprie imprese sta prendendo in prestito il proprio futuro.](https://domenicofraccalvieri.it/articoli/uno-stato-che-si-finanzia-con-la-liquidita-delle-proprie/): L'art. 37 del Ddl di Bilancio 2027 spalma su dieci anni, fino al 2036, circa 20 miliardi di crediti Superbonus che imprese e professionisti contavano di compensare nel 2027. Sono crediti…
-- [Se non riesci a farti accettare alla cassa, compra il posto in cui le persone decidono dove andare.](https://domenicofraccalvieri.it/articoli/se-non-riesci-a-farti-accettare-alla-cassa-compra-il-posto/): American Express ha messo sul piatto 700 milioni di dollari cash per comprare TheFork da Tripadvisor: oltre 50.000 ristoranti in 11 Paesi europei, 232 milioni di ricavi e un Ebitda appena…
 
 ## Articoli recenti · Valori
 
+- [Toto Wolff ha detto di recente una cosa che mi ha colpito.](https://domenicofraccalvieri.it/articoli/toto-wolff-ha-detto-di-recente-una-cosa-che-mi-ha-colpito/): In Mercedes, a meno di un errore davvero grave, nessuno può licenziarlo. Sa che le decisioni sono sue e che sarà lui a risponderne.
 - [Non l'hanno scelto. L'hanno subito.](https://domenicofraccalvieri.it/articoli/non-l-hanno-scelto-l-hanno-subito/): Dal 2023 i pescatori e le cooperative di Goro e del Delta del Po convivono con il granchio blu: una specie aliena arrivata da lontano, senza predatori, che ha divorato vongole, allevamenti…
 - [Nel 1977 abbiamo lanciato il cuore oltre l'ostacolo. Si chiamava Voyager 1.](https://domenicofraccalvieri.it/articoli/nel-1977-abbiamo-lanciato-il-cuore-oltre-l-ostacolo-si/): Quasi cinquant'anni dopo è ancora lì, a viaggiare nello spazio interstellare. Il 18 novembre sarà a un giorno luce da casa: un segnale partito dalla Terra impiegherà 24 ore per raggiungerla.
 - [Forti con i deboli, deboli con i forti. E se facessimo il contrario?](https://domenicofraccalvieri.it/articoli/forti-con-i-deboli-deboli-con-i-forti-e-se-facessimo-il/): Ogni giorno la politica, in ogni parte del mondo, ci mostra lo stesso copione: la voce grossa con chi non può difendersi, il silenzio o l'inchino davanti a chi ha più potere.
@@ -58,7 +59,6 @@
 - [14 milioni lasciati sul tavolo in due giornate.](https://domenicofraccalvieri.it/articoli/14-milioni-lasciati-sul-tavolo-in-due-giornate/): Questa settimana Inter, Napoli, Roma e Como hanno perso tutte e quattro le partite di Champions League. Dopo due turni, le squadre italiane hanno raccolto 2,8 milioni di euro di bonus…
 - [Mi piace l'idea di EUROPA, ma questa non è la mia Europa.](https://domenicofraccalvieri.it/articoli/mi-piace-l-idea-di-europa-ma-questa-non-e-la-mia-europa/): Leggo l'inchiesta di Fanpage.it sulla "Toolbox for Children in Return" di Frontex e faccio fatica a trovare le parole.
 - [Perché non scenderò mai in politica](https://domenicofraccalvieri.it/articoli/perche-non-scendero-mai-in-politica/): Non ho mai voluto fare politica, e non lo farò se il prezzo è perdere la libertà di non essere imparziale. Di dire quello che penso, senza pesare ogni parola su alleanze, equilibri e…
-- [Anche i giganti sbagliano. Ed è proprio così che crescono.](https://domenicofraccalvieri.it/articoli/anche-i-giganti-sbagliano-ed-e-proprio-cosi-che-crescono/): Bending Spoons è appena sbarcata al Nasdaq. Poche settimane dopo ha chiuso la più grande acquisizione della sua storia: Airtable, per oltre 1,2 miliardi di dollari.
 
 ## Articoli recenti · Attualità
 

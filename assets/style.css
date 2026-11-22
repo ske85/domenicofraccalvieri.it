@@ -410,3 +410,27 @@ body[data-paper] header.site, body:has(article.post) header.site{border-bottom-c
 .legal .body > p:first-child::first-letter{all:unset}
 .legal h1{margin-top:22px}
 .legal .updated{font-family:var(--f-mono); font-size:.82rem; color:var(--muted); margin-top:18px}
+
+/* ===== Contatti: riquadro "Scrivimi" (solo un link email, nessun modulo) ===== */
+.contact{display:grid; grid-template-columns:minmax(0,1fr) auto; align-items:center; gap:18px 32px; margin-block:8px 56px; padding:26px 28px;
+  background:var(--surface); border:1px solid var(--rule); border-radius:var(--r-l); box-shadow:var(--shadow)}
+.contact .label{margin:0; color:var(--c, var(--accent))}
+.contact h2{margin:6px 0 8px; font-family:var(--f-display); font-weight:800; font-size:1.45rem; line-height:1.2; letter-spacing:-.01em}
+.contact p{margin:0; max-width:52ch}
+.contact-act{display:grid; justify-items:center; gap:8px}
+.contact-btn{display:inline-flex; align-items:center; gap:8px; padding:12px 24px; border-radius:999px; background:var(--ink); color:var(--bg);
+  font-family:var(--f-display); font-weight:700; font-size:1rem; text-decoration:none; white-space:nowrap; transition:transform .15s, background .15s}
+.contact-btn:hover{transform:translateY(-1px); background:var(--c, var(--accent)); color:var(--bg)}
+.contact-mail{font-family:var(--f-mono); font-size:.82rem; font-weight:500; color:var(--muted); user-select:all}
+/* versione compatta in fondo agli articoli */
+.contact.small{display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:12px 20px; margin:32px 0 0; padding:16px 20px; box-shadow:none}
+.contact.small p{font-size:1rem}
+.contact.small .contact-btn{padding:9px 18px; font-size:.95rem}
+.cs .contact{margin-block:40px 8px}
+@media (max-width:640px){
+  .contact{grid-template-columns:minmax(0,1fr); padding:22px 20px}
+  .contact-act{justify-items:start}
+}
+/* in "Chi sono" il titolo del riquadro non deve prendere lo stile dei titoletti di sezione */
+.cs .contact h2{margin:6px 0 8px; padding:0; border:0; text-transform:none; letter-spacing:-.01em; color:var(--ink);
+  font-family:var(--f-display); font-weight:800; font-size:1.45rem; line-height:1.2}

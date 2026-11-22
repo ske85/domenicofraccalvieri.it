@@ -199,6 +199,40 @@ def correlati(posts, n=3):
     return out
 
 
+CONTACT = "info@domenicofraccalvieri.it"
+
+
+def _ent(s):
+    """Scrive ogni carattere come entità HTML: per i visitatori non cambia nulla, ma i programmi che raccolgono email lo leggono peggio."""
+    return "".join(f"&#{ord(c)};" for c in s)
+
+
+def mailto(subject):
+    from urllib.parse import quote
+    return _ent(f"mailto:{CONTACT}?subject=" + quote(subject, safe=""))
+
+
+def contact_box(where, titolo=""):
+    """Riquadro "Scrivimi" per le richieste di informazioni (solo un link email: il sito non raccoglie dati)."""
+    if where == "articolo":
+        oggetto = "Domanda sull'articolo: " + (titolo[:90] + "…" if len(titolo) > 90 else titolo)
+        return f"""<aside class="contact small" aria-label="Contatti">
+      <p><b>Hai una domanda su questo tema?</b> Scrivimi, rispondo personalmente.</p>
+      <a class="contact-btn" href="{mailto(oggetto)}">Scrivimi <span aria-hidden="true">→</span></a>
+    </aside>"""
+    return f"""<section class="contact" aria-labelledby="contact-h-{where}">
+    <div>
+      <p class="label">Contatti</p>
+      <h2 id="contact-h-{where}">Hai una domanda o una proposta?</h2>
+      <p>Per richieste di informazioni, interviste o inviti a eventi scrivimi: leggo e rispondo personalmente.</p>
+    </div>
+    <div class="contact-act">
+      <a class="contact-btn" href="{mailto("Richiesta di informazioni dal sito")}">Scrivimi <span aria-hidden="true">→</span></a>
+      <span class="contact-mail">{_ent(CONTACT)}</span>
+    </div>
+  </section>"""
+
+
 def build():
     if OUT.exists(): shutil.rmtree(OUT)
     (OUT / "assets").mkdir(parents=True)
@@ -243,6 +277,7 @@ def build():
     </div>
     {f'<div class="hashtags">{tags}</div>' if tags else ''}
     <div class="origin"><span>Pubblicato su LinkedIn il {fmt(p['data'])}</span>{fonte}<a href="{esc(p['linkedin'])}" target="_blank" rel="noopener">Post originale ↗</a></div>
+    {contact_box("articolo", plain(p['titolo']))}
     {f'<section class="related" aria-labelledby="rel-h"><h2 id="rel-h">Leggi anche</h2><ul>{related}</ul></section>' if related else ''}
     <nav class="pager" aria-label="Altri articoli">{pager}</nav>
   </article>"""
@@ -295,7 +330,8 @@ def build():
       <p class="t">Dal customer care alla direzione finanziaria di Energia Comune.</p>
       <a class="more-link" href="chi-sono/">Leggi la mia storia →</a></div>
     <div class="qr"><img src="assets/qr-profilo-linkedin.svg" alt="Codice QR del profilo LinkedIn di Domenico Fraccalvieri" width="96" height="96"><span>LinkedIn</span></div>
-  </section>"""
+  </section>
+  {contact_box("home")}"""
     ld = jsonld({"@context": "https://schema.org", "@type": "WebSite", "name": NAME, "url": SITE + "/", "inLanguage": "it-IT", "author": PERSON})
     (OUT / "index.html").write_text(page(f"{NAME} · Energia, finanza e valori",
         "Domenico Fraccalvieri, CFO di Energia Comune, scrive di mercato dell'energia, bollette, finanza d'impresa e leadership.",
@@ -305,20 +341,20 @@ def build():
     d = OUT / "chi-sono"; d.mkdir()
     (d / "index.html").write_text(page(f"Chi sono · {NAME}",
         "Domenico Fraccalvieri: dal customer care alla direzione finanziaria di Ecom S.p.A. – Energia Comune. Percorso, competenze e interventi.",
-        "/chi-sono/", upcoming((ROOT / "assets" / "chi-sono.html").read_text(encoding="utf-8").replace("{EC_BOX}", "")), jsonld({"@context": "https://schema.org", "@type": "ProfilePage", "mainEntity": PERSON}), depth=1), encoding="utf-8")
+        "/chi-sono/", upcoming((ROOT / "assets" / "chi-sono.html").read_text(encoding="utf-8").replace("{EC_BOX}", "").replace("{CONTATTI}", contact_box("chi-sono"))), jsonld({"@context": "https://schema.org", "@type": "ProfilePage", "mainEntity": PERSON}), depth=1), encoding="utf-8")
 
     # note legali e privacy
     d = OUT / "note-legali"; d.mkdir()
     (d / "index.html").write_text(page(f"Note legali e privacy · {NAME}",
         "Note legali, diritto d'autore e privacy del sito personale di Domenico Fraccalvieri: niente cookie, niente tracciamenti, opinioni personali.",
-        "/note-legali/", (ROOT / "assets" / "note-legali.html").read_text(encoding="utf-8").replace("{AGGIORNATO}", "14 novembre 2026"), depth=1), encoding="utf-8")
+        "/note-legali/", (ROOT / "assets" / "note-legali.html").read_text(encoding="utf-8").replace("{AGGIORNATO}", "22 novembre 2026"), depth=1), encoding="utf-8")
 
     # 404
     (OUT / "404.html").write_text(page(f"Pagina non trovata · {NAME}", "Pagina non trovata.", "/404.html",
         '<section class="hero"><h1>Pagina non trovata.</h1><p>Il link potrebbe essere cambiato. <a href="/">Torna agli articoli</a>.</p></section>'), encoding="utf-8")
 
     # sitemap
-    urls = [(SITE + "/", posts[0]["data"]), (SITE + "/chi-sono/", posts[0]["data"]), (SITE + "/note-legali/", "2026-11-14")] + \
+    urls = [(SITE + "/", posts[0]["data"]), (SITE + "/chi-sono/", posts[0]["data"]), (SITE + "/note-legali/", "2026-11-22")] + \
            [(f"{SITE}/articoli/{p['slug']}/", p["data"]) for p in posts]
     (OUT / "sitemap.xml").write_text('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' +
         "".join(f"  <url><loc>{u}</loc><lastmod>{d}</lastmod></url>\n" for u, d in urls) + "</urlset>\n")
@@ -336,6 +372,7 @@ def build():
         "- In precedenza ha fondato e guidato due imprese, nelle telecomunicazioni e nei servizi.",
         "- Formazione: laurea in Ingegneria gestionale al Politecnico di Bari; certificazione Utility Manager UNI 11782:2020.",
         f"- Profilo LinkedIn: {LINKEDIN}",
+        f"- Contatti per informazioni, interviste e inviti a eventi: {CONTACT}",
         "- Questo sito riguarda solo il Domenico Fraccalvieri CFO in Puglia: non ha legami con professionisti omonimi di altri settori o Paesi.",
         f"- Articoli pubblicati: {len(posts)} (" + ", ".join(f"{a}: {count[a]}" for a in AREAS) + "), aggiornati ogni giorno.",
         "",

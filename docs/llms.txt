@@ -7,7 +7,7 @@
 - Formazione: laurea in Ingegneria gestionale al Politecnico di Bari; certificazione Utility Manager UNI 11782:2020.
 - Profilo LinkedIn: https://www.linkedin.com/in/domenico-fraccalvieri/
 - Questo sito riguarda solo il Domenico Fraccalvieri CFO in Puglia: non ha legami con professionisti omonimi di altri settori o Paesi.
-- Articoli pubblicati: 273 (Energia: 39, Finanza: 98, Valori: 57, Attualità: 79), aggiornati ogni giorno.
+- Articoli pubblicati: 274 (Energia: 40, Finanza: 98, Valori: 57, Attualità: 79), aggiornati ogni giorno.
 
 ## Pagine principali
 
@@ -17,6 +17,7 @@
 
 ## Articoli recenti · Energia
 
+- [Energia: ottobre da record e una transizione ancora "addizionale"](https://domenicofraccalvieri.it/articoli/energia-ottobre-da-record-e-una-transizione-ancora/): Il mese di ottobre ha lasciato numeri importanti sui mercati energetici. I punti principali:
 - [L'UE rinvia dal 2027 al 2029 l'obbligo per gli importatori di gas e petrolio di monitorare e rendicontare le…](https://domenicofraccalvieri.it/articoli/l-ue-rinvia-dal-2027-al-2029-l-obbligo-per-gli-importatori/): L'UE rinvia dal 2027 al 2029 l'obbligo per gli importatori di gas e petrolio di monitorare e rendicontare le emissioni di metano delle loro forniture.
 - [Novembre, PUN e gas: quando ci abituiamo al peggio](https://domenicofraccalvieri.it/articoli/novembre-pun-e-gas-quando-ci-abituiamo-al-peggio/): A fine giugno il gas al PSV costava circa 0,46 €/Smc. Oggi siamo stabilmente tra 0,90 e 1,00 €/Smc, con un picco di 1,13 €/Smc a fine ottobre.
 - [Fotovoltaico sì o no? Prima delle opinioni, i numeri in Italia.](https://domenicofraccalvieri.it/articoli/fotovoltaico-si-o-no-prima-delle-opinioni-i-numeri-in-italia/): ☀️ Quanto ne abbiamo • 48,3 GW installati al 30 settembre 2026 (dati Terna/Italia Solare) • 44,3 TWh prodotti nel 2025: il 14,2% della domanda elettrica nazionale
@@ -28,7 +29,6 @@
 - [Quali regioni italiane stanno facendo davvero di più per il fotovoltaico?](https://domenicofraccalvieri.it/articoli/quali-regioni-italiane-stanno-facendo-davvero-di-piu-per-il/): Guardare i MW installati in valore assoluto dice poco: le regioni hanno dimensioni molto diverse. Per una classifica equa conviene rapportare la potenza totale (a terra e sui tetti) alla…
 - [Il gas in Italia è più che raddoppiato in 10 mesi. E non è (solo) colpa dell'inverno.](https://domenicofraccalvieri.it/articoli/il-gas-in-italia-e-piu-che-raddoppiato-in-10-mesi-e-non-e/): PSV, media mensile: 📉 Febbraio 2026: 33 €/MWh 📈 Ottobre 2026: oltre 81 €/MWh, con picchi giornalieri sopra 89 Un +120% che non nasce da un problema di quantità: gli stoccaggi italiani sono…
 - [Una scelta giusta, impostata male.](https://domenicofraccalvieri.it/articoli/una-scelta-giusta-impostata-male/): Stanotte i leader europei hanno chiesto alla Commissione di rivalutare l'impatto dell'ETS2, il nuovo mercato della CO2 su riscaldamento e carburanti. È un segnale importante, perché il…
-- [Si è chiusa martedì "It's All Energy & Utility" e voglio ringraziare Brainz Italy, e in particolare…](https://domenicofraccalvieri.it/articoli/si-e-chiusa-martedi-it-s-all-energy-utility-e-voglio/): Si è chiusa martedì "It's All Energy & Utility" e voglio ringraziare Brainz Italy, e in particolare Eleonora Pagliuso, per l'invito alla tavola rotonda "Finance e Sistemi di Pagamento per…
 
 ## Articoli recenti · Finanza
 

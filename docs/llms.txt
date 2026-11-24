@@ -8,7 +8,7 @@
 - Profilo LinkedIn: https://www.linkedin.com/in/domenico-fraccalvieri/
 - Contatti per informazioni, interviste e inviti a eventi: info@domenicofraccalvieri.it
 - Questo sito riguarda solo il Domenico Fraccalvieri CFO in Puglia: non ha legami con professionisti omonimi di altri settori o Paesi.
-- Articoli pubblicati: 275 (Energia: 40, Finanza: 98, Valori: 57, Attualità: 80), aggiornati ogni giorno.
+- Articoli pubblicati: 278 (Energia: 41, Finanza: 99, Valori: 58, Attualità: 80), aggiornati ogni giorno.
 
 ## Pagine principali
 
@@ -19,6 +19,7 @@
 ## Articoli recenti · Energia
 
 - [Energia: ottobre da record e una transizione ancora "addizionale"](https://domenicofraccalvieri.it/articoli/energia-ottobre-da-record-e-una-transizione-ancora/): Il mese di ottobre ha lasciato numeri importanti sui mercati energetici. I punti principali:
+- [In Cina c'è un palazzo in cui non abita nessuno.](https://domenicofraccalvieri.it/articoli/in-cina-c-e-un-palazzo-in-cui-non-abita-nessuno/): A Rudong, vicino a Shanghai, blocchi di cemento vengono sollevati quando il vento produce più energia di quanta ne serva, e fatti scendere quando la rete ne ha bisogno. È una batteria a…
 - [L'UE rinvia dal 2027 al 2029 l'obbligo per gli importatori di gas e petrolio di monitorare e rendicontare le…](https://domenicofraccalvieri.it/articoli/l-ue-rinvia-dal-2027-al-2029-l-obbligo-per-gli-importatori/): L'UE rinvia dal 2027 al 2029 l'obbligo per gli importatori di gas e petrolio di monitorare e rendicontare le emissioni di metano delle loro forniture.
 - [Novembre, PUN e gas: quando ci abituiamo al peggio](https://domenicofraccalvieri.it/articoli/novembre-pun-e-gas-quando-ci-abituiamo-al-peggio/): A fine giugno il gas al PSV costava circa 0,46 €/Smc. Oggi siamo stabilmente tra 0,90 e 1,00 €/Smc, con un picco di 1,13 €/Smc a fine ottobre.
 - [Fotovoltaico sì o no? Prima delle opinioni, i numeri in Italia.](https://domenicofraccalvieri.it/articoli/fotovoltaico-si-o-no-prima-delle-opinioni-i-numeri-in-italia/): ☀️ Quanto ne abbiamo • 48,3 GW installati al 30 settembre 2026 (dati Terna/Italia Solare) • 44,3 TWh prodotti nel 2025: il 14,2% della domanda elettrica nazionale
@@ -29,10 +30,10 @@
 - [Perché un Comune non può ragionare come un'azienda? 🏛️](https://domenicofraccalvieri.it/articoli/perche-un-comune-non-puo-ragionare-come-un-azienda/): Ne parlo da anni. E ogni volta la reazione è la stessa: scetticismo. "Il pubblico è un'altra cosa."
 - [Quali regioni italiane stanno facendo davvero di più per il fotovoltaico?](https://domenicofraccalvieri.it/articoli/quali-regioni-italiane-stanno-facendo-davvero-di-piu-per-il/): Guardare i MW installati in valore assoluto dice poco: le regioni hanno dimensioni molto diverse. Per una classifica equa conviene rapportare la potenza totale (a terra e sui tetti) alla…
 - [Il gas in Italia è più che raddoppiato in 10 mesi. E non è (solo) colpa dell'inverno.](https://domenicofraccalvieri.it/articoli/il-gas-in-italia-e-piu-che-raddoppiato-in-10-mesi-e-non-e/): PSV, media mensile: 📉 Febbraio 2026: 33 €/MWh 📈 Ottobre 2026: oltre 81 €/MWh, con picchi giornalieri sopra 89 Un +120% che non nasce da un problema di quantità: gli stoccaggi italiani sono…
-- [Una scelta giusta, impostata male.](https://domenicofraccalvieri.it/articoli/una-scelta-giusta-impostata-male/): Stanotte i leader europei hanno chiesto alla Commissione di rivalutare l'impatto dell'ETS2, il nuovo mercato della CO2 su riscaldamento e carburanti. È un segnale importante, perché il…
 
 ## Articoli recenti · Finanza
 
+- [Il credito che si chiude non salva nessuno.](https://domenicofraccalvieri.it/articoli/il-credito-che-si-chiude-non-salva-nessuno/): L'EBA, nel Risk Assessment Report di novembre, prevede una stretta sul credito alle PMI: istruttorie più severe, più attenzione ai flussi di cassa, spread più alti per chi ha margini…
 - [Agente di commercio, consulente, artigiano, piccola impresa con partita IVA: forse non sei tu il problema.](https://domenicofraccalvieri.it/articoli/agente-di-commercio-consulente-artigiano-piccola-impresa-con/): Agente di commercio, consulente, artigiano, piccola impresa con partita IVA: forse non sei tu il problema. Forse sei solo nel Paese sbagliato. 🇮🇹➡️🇺🇸
 - [Partita IVA, forfettario e agenti di commercio: cosa c’è davvero nella Manovra 2027 👇](https://domenicofraccalvieri.it/articoli/partita-iva-forfettario-e-agenti-di-commercio-cosa-ce/): Se ne parla da mesi, ora c’è il testo. Il DDL di Bilancio 2027 è passato dal Consiglio dei Ministri il 28 ottobre ed è in discussione in Parlamento. Ecco le novità che toccano gli autonomi.
 - [Leggo che in manovra cambia di nuovo il bonus giovani: prima flat tax all'1% sugli aumenti, ora Irpef…](https://domenicofraccalvieri.it/articoli/leggo-che-in-manovra-cambia-di-nuovo-il-bonus-giovani-prima/): Leggo che in manovra cambia di nuovo il bonus giovani: prima flat tax all'1% sugli aumenti, ora Irpef dimezzata nel 2027 e ridotta del 30% nel 2028 per circa 334mila neoassunti under 30…
@@ -44,10 +45,10 @@
 - [Quando lo shock non nasce dai numeri, servono proprio i numeri.](https://domenicofraccalvieri.it/articoli/quando-lo-shock-non-nasce-dai-numeri-servono-proprio-i/): Oggi Nvidia ha affidato la guida ad interim a Colette Kress, la sua CFO, dopo le dimissioni con effetto immediato di Jensen Huang. La crisi non nasce da un trimestre sbagliato, da margini…
 - [Poteva succedere anche in Svizzera? Sì. Anzi, è già successo.](https://domenicofraccalvieri.it/articoli/poteva-succedere-anche-in-svizzera-si-anzi-e-gia-successo/): Il Paraguay si era guadagnato il soprannome di "Svizzera del Sudamerica": tasse al 10%, debito basso, inflazione sotto controllo, crescita del 6,6% nel 2025 e il "grado di investimento"…
 - [Geox, primi nove mesi 2026: meno ricavi, bilancio più solido.](https://domenicofraccalvieri.it/articoli/geox-primi-nove-mesi-2026-meno-ricavi-bilancio-piu-solido/): 📉 Ricavi a 435 milioni di euro, in calo dell'11,7% rispetto al 2025 (-9,4% a perimetro omogeneo).
-- [Leggo dell'offerta di Crédit Agricole su Banco BPM e penso: siamo ancora qui a discutere di risiko bancario tra Stati.](https://domenicofraccalvieri.it/articoli/leggo-dell-offerta-di-credit-agricole-su-banco-bpm-e-penso/): Golden power, terzi poli, difesa dell'italianità (o della francesità, o della germanicità). Ogni governo prova a spostare qualche pedina sulla propria scacchiera nazionale. Intanto la…
 
 ## Articoli recenti · Valori
 
+- [Il silenzio in riunione non è mai neutro.](https://domenicofraccalvieri.it/articoli/il-silenzio-in-riunione-non-e-mai-neutro/): Spesso lo leggiamo male: – "Nessuna domanda? Bene, siamo allineati." – "Non interviene mai, forse non è competente." – "Meno obiezioni, più velocità."
 - [Si parla molto delle cifre che i dipendenti di alcune aziende tech hanno in azioni.](https://domenicofraccalvieri.it/articoli/si-parla-molto-delle-cifre-che-i-dipendenti-di-alcune/): A me colpisce un'altra cosa. Quando la condivisione di un progetto è reale, non un bonus simbolico ma una quota vera di ciò che si costruisce, nessuno è più attaccato a quel progetto delle…
 - ["I manager guadagnano milioni."](https://domenicofraccalvieri.it/articoli/i-manager-guadagnano-milioni/): Sì, ma quali manager? La cifra che gira di più è la media di 2,65 milioni l'anno per un CEO in Italia. È vera, però riguarda le società quotate in Borsa, cioè poche decine di aziende.
 - [A Shenzhen tre uomini si siedono allo stesso tavolo.](https://domenicofraccalvieri.it/articoli/a-shenzhen-tre-uomini-si-siedono-allo-stesso-tavolo/): Il primo vertice trilaterale della storia tra Stati Uniti, Cina e Russia, a margine dell'APEC.
@@ -59,7 +60,6 @@
 - [C'è un furto che fa rumore. E uno che non fa notizia.](https://domenicofraccalvieri.it/articoli/c-e-un-furto-che-fa-rumore-e-uno-che-non-fa-notizia/): L'arcivescovo di Milano, Mario Delpini, ha detto una cosa che merita di essere riletta con calma:
 - [Si dice sempre che i genitori debbano stare un passo indietro rispetto alle passioni dei figli.](https://domenicofraccalvieri.it/articoli/si-dice-sempre-che-i-genitori-debbano-stare-un-passo/): Non proiettare i propri sogni. Non spingere. Non "vivere attraverso di loro".
 - [Sette dissalatori pronti. Fermi.](https://domenicofraccalvieri.it/articoli/sette-dissalatori-pronti-fermi/): Il Politecnico di Bari ha sette impianti per rendere potabile l'acqua a Gaza e dintorni. Sono pronti, ma oggi chi li ha costruiti deve chiedere pubblicamente di poterli portare dentro la…
-- [Il dibattito sulla Ferrari Luce, la prima Ferrari elettrica, si è concentrato quasi tutto su una domanda: elettrico sì o no?](https://domenicofraccalvieri.it/articoli/il-dibattito-sulla-ferrari-luce-la-prima-ferrari-elettrica/): Secondo me la domanda giusta è un'altra: cosa rende un marchio sé stesso?
 
 ## Articoli recenti · Attualità
 

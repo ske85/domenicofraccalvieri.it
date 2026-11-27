@@ -1,5 +1,5 @@
 {
- "post_ricevuti_da_linkedin": 414,
+ "post_ricevuti_da_linkedin": 412,
  "campi": [
   "Date",
   "MediaUrl",
@@ -8,12 +8,12 @@
   "SharedUrl",
   "Visibility"
  ],
- "post_piu_recente_su_linkedin": "2026-11-26",
- "articoli_sul_sito": 281,
+ "post_piu_recente_su_linkedin": "2026-11-27",
+ "articoli_sul_sito": 282,
  "diagnosi": {
   "risposta_post": "200, elementi: 1",
   "eventi_registro": {
-   "ugcPosts:CREATE": 64,
+   "ugcPosts:CREATE": 61,
    "ugcPosts:UPDATE": 5,
    "ugcPosts:DELETE": 1
   }
